@@ -29,8 +29,8 @@
 	      <li class="nav-item dropdown">
 	      	<a class="nav-item nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/houselogo.png"> Houses</a>
 		  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="#">Traditional Houses</a>
-		          <a class="dropdown-item" href="#">Inline Houses</a>
+		          <a class="dropdown-item" href="#">Lane Houses</a>
+		          <a class="dropdown-item" href="#">Garden Houses</a>
           	</div>
       	  </li>
 	      <a class="nav-item nav-link" href="#"><img src="./img/officeslogo.png"> Offices</a>
@@ -92,8 +92,8 @@
 				    <option value="MAp">Modern Apartement</option>
 				    <option value="OAp">Old Apartement</option>
 				    <option value="Villa">Villa</option>
-				    <option value="THouse">Traditional House</option>
-				    <option value="IHouse">Inline House</option>
+				    <option value="THouse">Lane House</option>
+				    <option value="IHouse">Garden House</option>
 				    <option value="COffice">Creative Office</option>
 				</select>
 				<select>
@@ -120,19 +120,14 @@
 					<option value="">Compound</option>
 				</select>
 				<br>
+				<span class="title">Price Range: (in RMB)</span>
 				<!-- Range Slider -->
-				<div class="middle">
-					<div class="multi-range-slider">
-						<input type="range" id="input-left" min="0" max="100" value="25">
-						<input type="range" id="input-right" min="0" max="100" value="75">
-
-						<div class="slider">
-							<div class="track"></div>
-							<div class="range"></div>
-							<div class="thumb left"></div>
-							<div class="thumb right"></div>
-						</div>
-					</div>
+				<div class="price-slider">
+				  <span>from
+				  <input type="number" value="0" min="0" max="120000"/>	<br>to
+				  <input type="number" value="120000" min="0" max="120000"/></span>
+				  <input value="0" min="0" max="120000" step="500" type="range"/>
+				  <input value="120000" min="0" max="120000" step="500" type="range"/>				  
 				</div>
   				<!-- Possible <br> -->
   				<input type="checkbox" name=""> <img src="./img/AC.png"> Central air conditioning
@@ -165,8 +160,8 @@
 		<img src="./img/apartementslogoblack.png" data-toggle="tooltip" data-placement="right" title="Modern Apartements"></a><br>
 		<a href="#loc2" data-toggle="tooltip" data-placement="right" title="Old Apartements"><img src="./img/oldapartements.png"></a><br>
 		<a href="#loc3" data-toggle="tooltip" data-placement="right" title="Villas"><img src="./img/villalogoblack.png"></a><br>
-		<a href="#loc4" data-toggle="tooltip" data-placement="right" title="Traditional Houses"><img src="./img/tradiontalhouses.png"></a><br>
-		<a href="#loc5" data-toggle="tooltip" data-placement="right" title="Inline Houses"><img src="./img/inlinehouses.png"></a><br>
+		<a href="#loc4" data-toggle="tooltip" data-placement="right" title="Lane Houses"><img src="./img/inlinehouses.png"></a><br>
+		<a href="#loc5" data-toggle="tooltip" data-placement="right" title="Garden Houses"><img src="./img/traditional.png"></a><br>
 		<a href="#loc6" data-toggle="tooltip" data-placement="right" title="Creative Offices"><img src="./img/officeslogoblack.png"></a><br>
 	</div>
 	<div class="loc1">
@@ -197,11 +192,14 @@
 		  </div> 
 		</div>
 		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -214,12 +212,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -232,12 +233,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -250,12 +254,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -268,12 +275,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -286,12 +296,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -304,12 +317,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -332,11 +348,19 @@
 	</div>
 	<div class="loc1">
 		<div class="card">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
+		  <div class="container1" id="container1">
+		  	<span class="exInfo" id="exInfo">More Information goes here </span>
+		  	<img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  	<div id="NotA" data-toggle="tooltip" data-placement="top" title="Not Availible">
+			  	<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-slash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708l-7 7a.5.5 0 0 0 .708.708l7-7z"/>
+				</svg>
+			</div>
+		  	<div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -350,11 +374,14 @@
 		  </div> 
 		</div>
 		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -367,12 +394,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -385,12 +415,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -403,12 +436,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -421,12 +457,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -439,12 +478,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -457,12 +499,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -485,11 +530,19 @@
 	</div>
 	<div class="loc1">
 		<div class="card">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
+		  <div class="container1" id="container1">
+		  	<span class="exInfo" id="exInfo">More Information goes here </span>
+		  	<img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  	<div id="NotA" data-toggle="tooltip" data-placement="top" title="Not Availible">
+			  	<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-slash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708l-7 7a.5.5 0 0 0 .708.708l7-7z"/>
+				</svg>
+			</div>
+		  	<div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -503,29 +556,14 @@
 		  </div> 
 		</div>
 		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
-		  <div class="pricing">Price/Month</div>
-		  <div class="container">
-		    <h4><b>Area</b></h4>
-		    <div class="address">Address</div>
-		    <div class="mInfo">
-			    <span>BathR:</span>
-			    <span id="BathRNum">X</span>
-			    <span>BedR:</span>
-			    <span id="BedRNum">X</span>
-			</div>
-		  </div> 
-		</div>
-		<div class="card card-non-vis-mob">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
-		  		Last Update:
-		  		<span class="DateLU">X</span>
-		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -538,12 +576,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -556,12 +597,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -574,12 +618,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -592,30 +639,57 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
 		    <div class="address">Address</div>
 		    <div class="mInfo">
-				<img src="./img/showerlogo.png">
+			    <img src="./img/showerlogo.png">
 			    <span id="BathRNum">X</span>
 			    <img src="./img/bedlogo.png">
 			    <span id="BedRNum">X</span>
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -632,17 +706,25 @@
 	<div class="center">
 		<button type="button" class="btn btn-primary">More of this category</button>
 	</div>
-	<h2 id="loc4">Traditional Houses</h2>
+	<h2 id="loc4">Lane Houses</h2>
 	<div class="description">
-		<span>Standalone (Garden houses) and Semi-detached (lane houses) built mainly in the Former French concession area.<br>Houses were built before the revolution (1949) and come with vintage feelings.</span>
+		<span>Semi-detached lane houses built mainly in the Former French concession area.<br>Houses were built before the revolution (1949) and come with vintage feelings.</span>
 	</div>
 	<div class="loc1">
 		<div class="card">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
+		  <div class="container1" id="container1">
+		  	<span class="exInfo" id="exInfo">More Information goes here </span>
+		  	<img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  	<div id="NotA" data-toggle="tooltip" data-placement="top" title="Not Availible">
+			  	<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-slash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708l-7 7a.5.5 0 0 0 .708.708l7-7z"/>
+				</svg>
+			</div>
+		  	<div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -656,11 +738,14 @@
 		  </div> 
 		</div>
 		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -673,12 +758,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -691,12 +779,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -709,12 +800,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -727,12 +821,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -745,12 +842,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -763,12 +863,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -785,17 +888,25 @@
 	<div class="center">
 		<button type="button" class="btn btn-primary">More of this category</button>
 	</div>
-	<h2 id="loc5">Inline houses</h2>
+	<h2 id="loc5">Garden houses</h2>
 	<div class="description">
-		<span>Description of the type of housing</span>
+		<span>Standalone Garden houses built mainly in the Former French concession area.<br>Houses were built before the revolution (1949) and come with vintage feelings.</span>
 	</div>
 	<div class="loc1">
 		<div class="card">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
+		  <div class="container1" id="container1">
+		  	<span class="exInfo" id="exInfo">More Information goes here </span>
+		  	<img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  	<div id="NotA" data-toggle="tooltip" data-placement="top" title="Not Availible">
+			  	<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-slash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708l-7 7a.5.5 0 0 0 .708.708l7-7z"/>
+				</svg>
+			</div>
+		  	<div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -809,11 +920,14 @@
 		  </div> 
 		</div>
 		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -826,12 +940,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -844,12 +961,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -862,12 +982,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -880,12 +1003,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -898,12 +1024,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -916,12 +1045,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -941,11 +1073,19 @@
 	</div>
 	<div class="loc1">
 		<div class="card">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
+		  <div class="container1" id="container1">
+		  	<span class="exInfo" id="exInfo">More Information goes here </span>
+		  	<img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  	<div id="NotA" data-toggle="tooltip" data-placement="top" title="Not Availible">
+			  	<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-slash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708l-7 7a.5.5 0 0 0 .708.708l7-7z"/>
+				</svg>
+			</div>
+		  	<div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -959,11 +1099,14 @@
 		  </div> 
 		</div>
 		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -976,12 +1119,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -994,12 +1140,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -1012,30 +1161,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
-		  <div class="pricing">Price/Month</div>
-		  <div class="container">
-		    <h4><b>Area</b></h4>
-		    <div class="address">Address</div>
-		    <div class="mInfo">
-				<img src="./img/showerlogo.png">
-			    <span id="BathRNum">X</span>
-			    <img src="./img/bedlogo.png">
-			    <span id="BedRNum">X</span>
-			</div>
-		  </div> 
-		</div>
-		<div class="card card-non-vis-mob">
-		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
-		  <div class="lastUpdate">
-		  		Last Update:
-		  		<span class="DateLU">X</span>
-		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -1048,12 +1182,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -1066,12 +1203,15 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card card-non-vis-mob">
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
 		  <div class="lastUpdate">
 		  		Last Update:
 		  		<span class="DateLU">X</span>
 		  	</div>
+		  </div>
 		  <div class="pricing">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
@@ -1084,7 +1224,27 @@
 			</div>
 		  </div> 
 		</div>
-	</div>
+		<div class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
 </div>
 <footer class="sticky">
 	<nav>
@@ -1108,6 +1268,11 @@
     	$(function () {
   			$('[data-toggle="tooltip"]').tooltip()
 		})
+		function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
     </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script  src="function.js"></script>
 </body>
 </html>

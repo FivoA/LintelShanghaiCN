@@ -153,7 +153,7 @@ nav img {
 @media (max-width: 991px) {
 	nav select {
 		display: inline-block;
-		background-color: #46c2db;;
+		background-color: #46c2db;
 		color: white;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		margin-top: 10px;
@@ -319,7 +319,7 @@ footer a:hover {
 		text-decoration: underline #46c2db;
 }
 .search-filter {
-	height: 22vh;
+	height: 31vh;
 	width: 90vh;
 	background-color: white;
 	margin-top: 25px;
@@ -339,6 +339,125 @@ form select {
 form input {
 	margin-left: 10px;
 }
-input[type="checkbox"]:checked {
-	background-color: white;
+
+
+.price-slider {
+  width: 240px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  height: 5em;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
+.price-slider svg,
+.price-slider input[type=range] {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+input[type=number] {
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 1em;
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number]:invalid,
+input[type=number]:out-of-range {
+  border: 2px solid #e60023;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #46c2db;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #46c2db;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #46c2db;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #46c2db;
+  border-radius: 1px;
+  box-shadow: none;
+  border: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #46c2db;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #46c2db;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #46c2db;
+  border-radius: 1px;
+  box-shadow: none;
+  border: 0;
+}
+input[type=range]::-moz-range-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #46c2db;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #46c2db;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower,
+input[type=range]::-ms-fill-upper {
+  background: #46c2db;
+  border-radius: 1px;
+  box-shadow: none;
+  border: 0;
+}
+input[type=range]::-ms-thumb {
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 0px 0px #000;
+  border: 1px solid #46c2db;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #46c2db;
+  cursor: pointer;
+}
+.title {
+ 	position: absolute;
+ 	margin-top: 10px;
+ }
