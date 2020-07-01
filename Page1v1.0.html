@@ -124,10 +124,10 @@
 				<!-- Range Slider -->
 				<div class="price-slider">
 				  <span>from
-				  <input type="number" value="0" min="0" max="120000"/>	<br>to
-				  <input type="number" value="120000" min="0" max="120000"/></span>
-				  <input value="0" min="0" max="120000" step="500" type="range"/>
-				  <input value="120000" min="0" max="120000" step="500" type="range"/>				  
+				  <input type="number" value="0" min="0" max="300000"/>	<br>to
+				  <input type="number" value="300000" min="0" max="300000"/></span>
+				  <input value="0" min="0" max="300000" step="500" type="range"/>
+				  <input value="300000" min="0" max="300000" step="500" type="range"/>				  
 				</div>
   				<!-- Possible <br> -->
   				<input type="checkbox" name=""> <img src="./img/AC.png"> Central air conditioning
@@ -1271,8 +1271,47 @@
 		function updateTextInput(val) {
           document.getElementById('textInput').value=val; 
         }
+        (function() {
+ 
+	  var parent = document.querySelector(".price-slider");
+	  if(!parent) return;
+	 
+	  var
+	    rangeS = parent.querySelectorAll("input[type=range]"),
+	    numberS = parent.querySelectorAll("input[type=number]");
+	 
+	  rangeS.forEach(function(el) {
+	    el.oninput = function() {
+	      var slide1 = parseFloat(rangeS[0].value),
+	        	slide2 = parseFloat(rangeS[1].value);
+	 
+	      if (slide1 > slide2) {
+			[slide1, slide2] = [slide2, slide1];
+	      }
+	 
+	      numberS[0].value = slide1;
+	      numberS[1].value = slide2;
+	    }
+	  });
+	 
+	  numberS.forEach(function(el) {
+	    el.oninput = function() {
+			var number1 = parseFloat(numberS[0].value),
+			number2 = parseFloat(numberS[1].value);
+			
+	      if (number1 > number2) {
+	        var tmp = number1;
+	        numberS[0].value = number2;
+	        numberS[1].value = tmp;
+	      }
+	 
+	      rangeS[0].value = number1;
+	      rangeS[1].value = number2;
+	 
+		    }
+		  });
+		 
+		})();
     </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script  src="function.js"></script>
 </body>
 </html>
