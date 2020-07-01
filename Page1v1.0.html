@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="stylehome.css">
+	<title>Home</title>
+</head>
+<body>
+<div class="Header">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <img src="./img/logo.png" width="110" height="40">
+	      <a class="nav-item nav-link active" href="#"><img src="./img/homelogo.png">
+		   Home <span class="sr-only">(current)</span></a>
+		  <li class="nav-item dropdown">
+	      	<a class="nav-item nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/apartementslogo.png"> Apartements</a>
+		  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Modern Apartements</a>
+	          <a class="dropdown-item" href="#">Old Apartements</a>
+          	</div>
+          </li>
+	      <a class="nav-item nav-link" href="#"><img src="./img/villalogo.png"> Villas</a>
+	      <li class="nav-item dropdown">
+	      	<a class="nav-item nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/houselogo.png"> Houses</a>
+		  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="#">Traditional Houses</a>
+		          <a class="dropdown-item" href="#">Inline Houses</a>
+          	</div>
+      	  </li>
+	      <a class="nav-item nav-link" href="#"><img src="./img/officeslogo.png"> Offices</a>
+	      <a class="nav-item nav-link" href="#"><img src="./img/orientationlogo.png"> Orientation</a>
+	      <a class="nav-item nav-link" href="#"><img src="./img/supportlogo.png"> Support</a>
+	      <div class="psup">
+	      	<a class="nav-item nav-link" href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title="24 Hour Hotline:<br>(86) 021-64689611<br>(86) 138-1843-4844"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>	
+		    </svg></a> 
+		  </div>
+		  <a href="http://www.lintel-shanghai.com/login/login.aspx"><button type="button" class="btn btn-outline-light spacel">Join us</button></a>
+		  <div class="langs spacel langa">
+			  <a href="Page1v1.0.html" class="selectedlang">Eng.</a>
+			  <a href="#">中文</a>
+		  </div>
+	    </div>
+	  </div>
+	  <select onchange="location = this.value;">
+        <option value="#" selected="selected">Home</option> 
+        <option value="#">Apartements</option> 
+        <option value="#">Villas</option> 
+        <option value="#">Houses</option>
+	    <option value="#">Offices</option>	 
+	    <option value="#">Map</option>   
+	    <option value="#">Support</option>       
+	    <option value="#">Contact</option>	 
+	    <option value="#">Join Us</option>            
+	  </select>
+	  <select onchange="location = this.value;">
+        <option value="#" selected="selected">English</option> 
+        <option value="#">中文</option>            
+	  </select>
+	</nav>
+	<div class="wrap">
+	   <h1>Search by Category</h1>
+	   <div class="search">
+	      	<form class="form-inline my-2 my-lg-0">
+		        <input class="form-control mr-sm-2 searchTerm" type="search" placeholder="Area/Type of Housing" aria-label="Search" size="32">
+		        <div class="btn-group closel">
+				  <button type="button" class="btn btn-primary filter" onclick="toggle_visibility('foo');"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-menu-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" d="M15 3.207v9a1 1 0 0 1-1 1h-3.586A2 2 0 0 0 9 13.793l-1 1-1-1a2 2 0 0 0-1.414-.586H2a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-13 11a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3.586a1 1 0 0 0-.707.293l-1.353 1.354a.5.5 0 0 1-.708 0L6.293 14.5a1 1 0 0 0-.707-.293H2z"/>
+				  <path fill-rule="evenodd" d="M15 5.207H1v1h14v-1zm0 4H1v1h14v-1zm-13-5.5a.5.5 0 0 0 .5.5h6a.5.5 0 1 0 0-1h-6a.5.5 0 0 0-.5.5zm0 4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0 4a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5z"/>
+				  </svg>
+				    Filter
+				  </button>
+				    
+				</div>
+
+		        <button class="btn btn-primary my-2 my-sm-0" type="#" onclick="toggle_visibility('foo');"><i class="fa fa-search"></i> Search</button>
+	        </form>
+	     	</button>
+	   	</div>
+	   	<div class="search-filter" id="foo">
+	   		<form action="" id="options">
+				<!-- More options for search -->
+				<select>
+				    <option value="" disabled selected hidden>Type</option>
+				    <option value="All">All</option>
+				    <option value="MAp">Modern Apartement</option>
+				    <option value="OAp">Old Apartement</option>
+				    <option value="Villa">Villa</option>
+				    <option value="THouse">Traditional House</option>
+				    <option value="IHouse">Inline House</option>
+				    <option value="COffice">Creative Office</option>
+				</select>
+				<select>
+				    <option value="" disabled hidden selected>Location</option>
+				    <option value="All">All</option>
+				    <option value="FCons">French consession</option>
+				    <option value="JDis">Jingan District</option>
+				    <option value="XandT">Xintiandi and Tianzifang</option>
+				    <option value="">Lujiazui</option>
+				    <option value="">World Park and Biyun Community</option>
+				</select>
+				<select>
+				    <option value="" selected disabled hidden>Type</option>
+				    <option value="All">All</option>
+				    <option value="1BR">1 Bedroom</option>
+				   	<option value="2BR">2 Bedrooms</option>
+				   	<option value="3BR">3 Bedrooms</option>
+				</select>
+				<select>
+					<option value="" selected disabled hidden>Characteristics</option>
+					<option value="All">All</option>
+					<option value="TFM">Top-floor mansion</option>
+					<option value="">Overlay Room</option>
+					<option value="">Compound</option>
+				</select>
+				<br>
+				<!-- Range Slider -->
+				<div class="middle">
+					<div class="multi-range-slider">
+						<input type="range" id="input-left" min="0" max="100" value="25">
+						<input type="range" id="input-right" min="0" max="100" value="75">
+
+						<div class="slider">
+							<div class="track"></div>
+							<div class="range"></div>
+							<div class="thumb left"></div>
+							<div class="thumb right"></div>
+						</div>
+					</div>
+				</div>
+  				<!-- Possible <br> -->
+  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central air conditioning
+  				<input type="checkbox" name=""> <img src="./img/heating.png"> Underfloor heating
+				<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
+				<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
+				<br>
+				<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
+				<input type="checkbox" name=""> <img src="./img/warmwall.png "> Wall warm
+				<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
+				<input type="checkbox" name=""> <img src="./img/energy.png "> In the rental source
+				<br><br>
+				<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
+  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
+				</svg>Reset Form</button>
+				<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
+			</form>
+		</div>
+	</div>
+
+</div><br>
+<div class="main-content">
+	<h2 id="loc1">Modern Apartements</h2>
+	<div class="description">
+		<span>In the compounds that normally come with good security and facilities. <br>Could be in the low-rise or high-rise buildings. Compounds were normally built recently (after 1997).</span>
+	</div>
+	<div class="sidenav1">
+		<a href="#loc1">
+		<img src="./img/apartementslogoblack.png" data-toggle="tooltip" data-placement="right" title="Modern Apartements"></a><br>
+		<a href="#loc2" data-toggle="tooltip" data-placement="right" title="Old Apartements"><img src="./img/oldapartements.png"></a><br>
+		<a href="#loc3" data-toggle="tooltip" data-placement="right" title="Villas"><img src="./img/villalogoblack.png"></a><br>
+		<a href="#loc4" data-toggle="tooltip" data-placement="right" title="Traditional Houses"><img src="./img/tradiontalhouses.png"></a><br>
+		<a href="#loc5" data-toggle="tooltip" data-placement="right" title="Inline Houses"><img src="./img/inlinehouses.png"></a><br>
+		<a href="#loc6" data-toggle="tooltip" data-placement="right" title="Creative Offices"><img src="./img/officeslogoblack.png"></a><br>
+	</div>
+	<div class="loc1">
+		<div class="card">
+		  <div class="container1" id="container1">
+		  	<span class="exInfo" id="exInfo">More Information goes here </span>
+		  	<img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  	<div id="NotA" data-toggle="tooltip" data-placement="top" title="Not Availible">
+			  	<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-slash-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  				<path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.146-3.146a.5.5 0 0 0-.708-.708l-7 7a.5.5 0 0 0 .708.708l7-7z"/>
+				</svg>
+			</div>
+		  	<div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+	<div class="center">
+		<button type="button" class="btn btn-primary">More of this category</button>
+	</div>
+	<h2 id="loc2">Old Apartements</h2>
+	<div class="description">
+		<span>Renovated Apartments in the historical buildings (lane houses, garden houses & colonial buildings) and the local Chinese ones.<br> Buildings were normally built before the 1980s. Apartments often come with high ceilings, bronze windows and original flooring.</span>
+	</div>
+	<div class="loc1">
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+	<div class="center">
+		<button type="button" class="btn btn-primary">More of this category</button>
+	</div>
+	<h2 id="loc3">Villas</h2>
+	<div class="description">
+		<span>Freestanding and Semi-detached houses in the modern compounds that come with good security and facilities. <br>Compounds were normally built recently (after 1997).</span>
+	</div>
+	<div class="loc1">
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <span>BathR:</span>
+			    <span id="BathRNum">X</span>
+			    <span>BedR:</span>
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+				<img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+	<div class="center">
+		<button type="button" class="btn btn-primary">More of this category</button>
+	</div>
+	<h2 id="loc4">Traditional Houses</h2>
+	<div class="description">
+		<span>Standalone (Garden houses) and Semi-detached (lane houses) built mainly in the Former French concession area.<br>Houses were built before the revolution (1949) and come with vintage feelings.</span>
+	</div>
+	<div class="loc1">
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+	<div class="center">
+		<button type="button" class="btn btn-primary">More of this category</button>
+	</div>
+	<h2 id="loc5">Inline houses</h2>
+	<div class="description">
+		<span>Description of the type of housing</span>
+	</div>
+	<div class="loc1">
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+	<h2 id="loc6">Creative offices</h2>
+	<div class="description">
+		<span>Offices in the old factory buildings or historical houses which are more spacious and charming.</span>
+	</div>
+	<div class="loc1">
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+				<img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div class="card card-non-vis-mob">
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <h4><b>Area</b></h4>
+		    <div class="address">Address</div>
+		    <div class="mInfo">
+			    <img src="./img/showerlogo.png">
+			    <span id="BathRNum">X</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+</div>
+<footer class="sticky">
+	<nav>
+		<a href="#">About us </a>| 		
+		<a href="#"> Contact us </a> | 	
+		<a href="#"> Career</a> | 	
+		<span>沪ICP备19033836号	</span>
+	</nav>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    	}
+    	$(function () {
+  			$('[data-toggle="tooltip"]').tooltip()
+		})
+    </script>
+</body>
+</html>
