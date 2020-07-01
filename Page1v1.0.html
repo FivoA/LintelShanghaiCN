@@ -40,7 +40,7 @@
 	      	<a class="nav-item nav-link" href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title="24 Hour Hotline:<br>(86) 021-64689611<br>(86) 138-1843-4844"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 		    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>	
 		    </svg></a> 
-		  </div>
+		  </div>	
 		  <a href="http://www.lintel-shanghai.com/login/login.aspx"><button type="button" class="btn btn-outline-light spacel">Join us</button></a>
 		  <div class="langs spacel langa">
 			  <a href="Page1v1.0.html" class="selectedlang">Eng.</a>
@@ -65,7 +65,7 @@
 	  </select>
 	</nav>
 	<div class="wrap">
-	   <h1>Search by Category</h1>
+	   <h1>Your Home, Your Style!</h1>
 	   <div class="search">
 	      	<form class="form-inline my-2 my-lg-0">
 		        <input class="form-control mr-sm-2 searchTerm" type="search" placeholder="Area/Type of Housing" aria-label="Search" size="32">
@@ -79,11 +79,13 @@
 				    
 				</div>
 
-		        <button class="btn btn-primary my-2 my-sm-0" type="#" onclick="toggle_visibility('foo');"><i class="fa fa-search"></i> Search</button>
+		        <button class="btn btn-primary my-2 my-sm-0 margleft" type="#"><i class="fa fa-search"></i> Search</button>
+
 	        </form>
 	     	</button>
 	   	</div>
-	   	<div class="search-filter" id="foo">
+	</div>
+	<div class="search-filter" id="foo">
 	   		<form action="" id="options">
 				<!-- More options for search -->
 				<select>
@@ -120,7 +122,7 @@
 					<option value="">Compound</option>
 				</select>
 				<br>
-				<span class="title">Price Range: (in RMB)</span>
+				<span class="title">Price Range: (RMB)</span>
 				<!-- Range Slider -->
 				<div class="price-slider">
 				  <span>from
@@ -130,24 +132,134 @@
 				  <input value="300000" min="0" max="300000" step="500" type="range"/>				  
 				</div>
   				<!-- Possible <br> -->
-  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central air conditioning
-  				<input type="checkbox" name=""> <img src="./img/heating.png"> Underfloor heating
-				<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
-				<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
+  				<div class="checkb1">
+  					<div class="t1">
+	  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central AC
+	  				</div>
+	  				<div class="t1">
+	  				<input type="checkbox" name=""> <img src="./img/heating.png"> Floor heating
+	  				</div>
+	  				<div class="t1">
+					<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
+					</div>
+					<div class="t1">
+					<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
+					</div>
+					<div class="t1">
+					<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
+					</div>
+					<div class="t1">
+					<input type="checkbox" name=""> <img src="./img/warmwall.png "> Radiators
+					</div>
+					<div class="t1">
+					<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
+					</div>
+					<div class="t1">
+					<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
+					</div>
+				</div>
 				<br>
-				<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
-				<input type="checkbox" name=""> <img src="./img/warmwall.png "> Wall warm
-				<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
-				<input type="checkbox" name=""> <img src="./img/energy.png "> In the rental source
-				<br><br>
-				<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
-  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
-				</svg>Reset Form</button>
-				<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
+				<div class="center">
+					<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
+	  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
+					</svg>Reset Form</button>
+					<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
+				</div>
 			</form>
 		</div>
-	</div>
+
+<!--  Hidden extra mobile filter menu -->
+<button type="button" class="btn btn-primary filter2" onclick="toggle_visibility('foo2');"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-menu-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				  <path fill-rule="evenodd" d="M15 3.207v9a1 1 0 0 1-1 1h-3.586A2 2 0 0 0 9 13.793l-1 1-1-1a2 2 0 0 0-1.414-.586H2a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm-13 11a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3.586a1 1 0 0 0-.707.293l-1.353 1.354a.5.5 0 0 1-.708 0L6.293 14.5a1 1 0 0 0-.707-.293H2z"/>
+				  <path fill-rule="evenodd" d="M15 5.207H1v1h14v-1zm0 4H1v1h14v-1zm-13-5.5a.5.5 0 0 0 .5.5h6a.5.5 0 1 0 0-1h-6a.5.5 0 0 0-.5.5zm0 4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5zm0 4a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5z"/>
+				  </svg>
+				    Filter
+				  </button>
+				  <div class="search-filter2" id="foo2">
+	   		<form action="" id="options">
+				<select>
+				    <option value="" disabled selected hidden>Type</option>
+				    <option value="All">All</option>
+				    <option value="MAp">Modern Apartement</option>
+				    <option value="OAp">Old Apartement</option>
+				    <option value="Villa">Villa</option>
+				    <option value="THouse">Lane House</option>
+				    <option value="IHouse">Garden House</option>
+				    <option value="COffice">Creative Office</option>
+				</select><br>
+				<select>
+				    <option value="" disabled hidden selected>Location</option>
+				    <option value="All">All</option>
+				    <option value="FCons">French consession</option>
+				    <option value="JDis">Jingan District</option>
+				    <option value="XandT">Xintiandi and Tianzifang</option>
+				    <option value="">Lujiazui</option>
+				    <option value="">World Park and Biyun Community</option>
+				</select><br>
+				<select>
+				    <option value="" selected disabled hidden>Type</option>
+				    <option value="All">All</option>
+				    <option value="1BR">1 Bedroom</option>
+				   	<option value="2BR">2 Bedrooms</option>
+				   	<option value="3BR">3 Bedrooms</option>
+				</select><br>
+				<select>
+					<option value="" selected disabled hidden>Characteristics</option>
+					<option value="All">All</option>
+					<option value="TFM">Top-floor mansion</option>
+					<option value="">Overlay Room</option>
+					<option value="">Compound</option>
+				</select>
+				<br>
+				<span class="title">Price Range: <br>(RMB)</span><br>
+				<!-- Range Slider -->
+				<div class="price-slider2">
+				  <span>from
+				  <input type="number" value="0" min="0" max="300000"/>	<br>to
+				  <input type="number" value="300000" min="0" max="300000"/></span><br>
+				  <input value="0" min="0" max="300000" step="500" type="range"/>
+				  <input value="300000" min="0" max="300000" step="500" type="range"/>				  
+				</div>
+  				<!-- Possible <br> -->
+  				<div class="checkb2">
+  					<div class="t2">
+	  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central AC
+	  				</div>
+	  				<div class="t2">
+	  				<input type="checkbox" name=""> <img src="./img/heating.png"> Floor heating
+	  				</div>
+	  				<div class="t2">
+					<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
+					</div>
+					<div class="t2">
+					<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
+					</div>
+					<div class="t2">
+					<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
+					</div>
+					<div class="t2">
+					<input type="checkbox" name=""> <img src="./img/warmwall.png "> Radiators
+					</div>
+					<div class="t2">
+					<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
+					</div>
+					<div class="t2">
+					<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
+					</div>
+				</div>
+				<br>
+				<div class="center">
+					<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
+	  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
+					</svg>Reset Form</button>
+					<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
+				</div>
+			</form>
+		</div>
+
+<!-- /CLose menu -->
 
 </div><br>
 <div class="main-content">
@@ -157,10 +269,10 @@
 	</div>
 	<div class="sidenav1">
 		<a href="#loc1">
-		<img src="./img/apartementslogoblack.png" data-toggle="tooltip" data-placement="right" title="Modern Apartements"></a><br>
+		<img src="./img/apartementslogoblack.png" data-toggle="tooltip" data-placement="right" title="Modern Apartements" onmouseover="this.src='./img/apartementslogo.png';" onmouseout="this.src='./img/apartementslogoblack.png';"></a><br>
 		<a href="#loc2" data-toggle="tooltip" data-placement="right" title="Old Apartements"><img src="./img/oldapartements.png"></a><br>
-		<a href="#loc3" data-toggle="tooltip" data-placement="right" title="Villas"><img src="./img/villalogoblack.png"></a><br>
-		<a href="#loc4" data-toggle="tooltip" data-placement="right" title="Lane Houses"><img src="./img/inlinehouses.png"></a><br>
+		<a href="#loc3" data-toggle="tooltip" data-placement="right" title="Villas"><img src="./img/villalogoblack.png" onmouseover="this.src='./img/villalogowhite.png';" onmouseout="this.src='./img/villalogoblack.png';"></a><br>
+		<a href="#loc4" data-toggle="tooltip" data-placement="right" title="Lane Houses"><img src="./img/inlinehousesblack.png" onmouseover="this.src='./img/inlinehouseswhite.png';" onmouseout="this.src='./img/inlinehousesblack.png';"></a><br>
 		<a href="#loc5" data-toggle="tooltip" data-placement="right" title="Garden Houses"><img src="./img/traditional.png"></a><br>
 		<a href="#loc6" data-toggle="tooltip" data-placement="right" title="Creative Offices"><img src="./img/officeslogoblack.png"></a><br>
 	</div>
@@ -1265,15 +1377,62 @@
        else
           e.style.display = 'block';
     	}
+
     	$(function () {
   			$('[data-toggle="tooltip"]').tooltip()
 		})
+
 		function updateTextInput(val) {
           document.getElementById('textInput').value=val; 
         }
         (function() {
  
 	  var parent = document.querySelector(".price-slider");
+	  if(!parent) return;
+	 
+	  var
+	    rangeS = parent.querySelectorAll("input[type=range]"),
+	    numberS = parent.querySelectorAll("input[type=number]");
+	 
+	  rangeS.forEach(function(el) {
+	    el.oninput = function() {
+	      var slide1 = parseFloat(rangeS[0].value),
+	        	slide2 = parseFloat(rangeS[1].value);
+	 
+	      if (slide1 > slide2) {
+			[slide1, slide2] = [slide2, slide1];
+	      }
+	 
+	      numberS[0].value = slide1;
+	      numberS[1].value = slide2;
+	    }
+	  });
+	 
+	  numberS.forEach(function(el) {
+	    el.oninput = function() {
+			var number1 = parseFloat(numberS[0].value),
+			number2 = parseFloat(numberS[1].value);
+			
+	      if (number1 > number2) {
+	        var tmp = number1;
+	        numberS[0].value = number2;
+	        numberS[1].value = tmp;
+	      }
+	 
+	      rangeS[0].value = number1;
+	      rangeS[1].value = number2;
+	 
+		    }
+		  });
+		 
+		})();
+
+		function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+        (function() {
+ 
+	  var parent = document.querySelector(".price-slider2");
 	  if(!parent) return;
 	 
 	  var

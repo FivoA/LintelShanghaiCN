@@ -22,7 +22,8 @@ svg {}
 .sidenav1 {
 	float: right;
 	margin-right: 200px;
-	position: relative;
+	position: sticky;
+	top: 0;
 }
 .sidenav1 img {
 	width: 25px;
@@ -31,11 +32,11 @@ svg {}
 	padding: 3px;
 }
 .sidenav1 img:hover {
-	background-color: #CDCDCD;
+	background-color: black;
 }
 .wrap {
   width: 32%;
-  position: absolute;
+  position: relative;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -177,6 +178,12 @@ nav img {
 		height: 60vh;
 	}
 }
+.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: none;
+	}
+
 @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
@@ -188,16 +195,35 @@ nav img {
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 60vh;
+		height: 120vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 360px;
+		margin-left: 150px;
+	}
+	.filter2:hover {
+	background-color: white;
+	color: #46c2db;
 	}
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin-bottom: 10px;
+  transition: all 1s;
 }
 .card:hover {
   box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  transform: scale(1.04);
 }
 h2 {
 	text-align: center;
@@ -319,17 +345,15 @@ footer a:hover {
 		text-decoration: underline #46c2db;
 }
 .search-filter {
-	height: 31vh;
+	height: 242px;
 	width: 90vh;
 	background-color: white;
-	margin-top: 25px;
+	margin-top: 150px;
+	margin-left: 400px;
  	display: none; 
  	padding: 3px;
 }
-@media (min-width: 992px) {
-.navbar-expand-lg .navbar-nav .dropdown-menu-right{
-		
-	}
+@media (max-width: 1600px) {
 }
 form select {
 	background-color: white;
@@ -338,6 +362,10 @@ form select {
 }
 form input {
 	margin-left: 10px;
+}
+form label {
+	display: block;
+
 }
 
 
@@ -350,14 +378,30 @@ form input {
   margin-bottom: 15px;
   margin-top: 10px;
 }
+.price-slider2 {
+  width: 240px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  height: 5em;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.price-slider2 svg,
+.price-slider2 input[type=range] {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .price-slider svg,
 .price-slider input[type=range] {
   position: absolute;
   left: 0;
   bottom: 0;
 }
+
 input[type=number] {
-  border: 1px solid #ddd;
+  border: 1px solid #46c2db;
   text-align: center;
   font-size: 1em;
   -moz-appearance: textfield;
@@ -461,3 +505,22 @@ input[type=range]::-ms-thumb {
  	position: absolute;
  	margin-top: 10px;
  }
+.checkb1 {	
+	display: grid;
+	grid-template-columns: 145px 145px 145px 145px;
+}
+.checkb1 input {
+		align-self: center;
+}
+.t1 {
+	align-self: center;
+}
+
+.search-filter2 {
+	height: 500px;
+	width: 34vh;
+	background-color: white;
+	margin-top: 10px;
+ 	display: none; 
+ 	padding: 3px;
+}
