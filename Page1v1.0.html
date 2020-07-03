@@ -88,84 +88,178 @@
 	<div class="search-filter" id="foo">
 	   		<form action="" id="options">
 				<!-- More options for search -->
-				<select>
+				<div class="centered">
+				<select style="width: 230px; height: 30px;" id="myselection">
 				    <option value="" disabled selected hidden>Type</option>
-				    <option value="All">All</option>
-				    <option value="MAp">Modern Apartement</option>
-				    <option value="OAp">Old Apartement</option>
-				    <option value="Villa">Villa</option>
-				    <option value="THouse">Lane House</option>
-				    <option value="IHouse">Garden House</option>
-				    <option value="COffice">Creative Office</option>
+				    <option value="One">All</option>
+				    <option value="One">Modern Apartement</option>
+				    <option value="One">Old Apartement</option>
+				    <option value="One">Villa</option>
+				    <option value="One">Lane House</option>
+				    <option value="One">Garden House</option>
+				    <option value="Two">Creative Office</option>
 				</select>
-				<select>
+				<select style="width: 230px; height: 30px;" id="Location">
 				    <option value="" disabled hidden selected>Location</option>
-				    <option value="All">All</option>
-				    <option value="FCons">French consession</option>
-				    <option value="JDis">Jingan District</option>
-				    <option value="XandT">Xintiandi and Tianzifang</option>
-				    <option value="">Lujiazui</option>
-				    <option value="">World Park and Biyun Community</option>
+				    <option value="X">All</option>
+				    <option value="X">French consession</option>
+				    <option value="X">Jingan District</option>
+				    <option value="X">Xintiandi and Tianzifang</option>
+				    <option value="X">Lujiazui</option>
+				    <option value="X">World Park and Biyun Community</option>
 				</select>
-				<select>
-				    <option value="" selected disabled hidden>Type</option>
-				    <option value="All">All</option>
-				    <option value="1BR">1 Bedroom</option>
-				   	<option value="2BR">2 Bedrooms</option>
-				   	<option value="3BR">3 Bedrooms</option>
+				<select style="width: 230px; height: 30px;" id="Layout">
+				    <option value="" selected disabled hidden>Layout</option>
+				    <option value="X">All</option>
+				    <option value="X">1 Bedroom</option>
+				   	<option value="X">2 Bedrooms</option>
+				   	<option value="X">3 Bedrooms</option>
 				</select>
-				<select>
-					<option value="" selected disabled hidden>Characteristics</option>
-					<option value="All">All</option>
-					<option value="TFM">Top-floor mansion</option>
-					<option value="">Overlay Room</option>
-					<option value="">Compound</option>
+				<select style="width: 230px; height: 30px;" class="Two Vall">
+					<option value="" selected disabled hidden>Features</option>
+					<option value="X">All</option>
+					<option value="X">Top-floor mansion</option>
+					<option value="X">Overlay Room</option>
+					<option value="X">Compound</option>
 				</select>
-				<br>
-				<span class="title">Price Range: (RMB)</span>
-				<!-- Range Slider -->
-				<div class="price-slider">
-				  <span>from
-				  <input type="number" value="0" min="0" max="300000"/>	<br>to
-				  <input type="number" value="300000" min="0" max="300000"/></span>
-				  <input value="0" min="0" max="300000" step="500" type="range"/>
-				  <input value="300000" min="0" max="300000" step="500" type="range"/>				  
-				</div>
-  				<!-- Possible <br> -->
-  				<div class="checkb1">
-  					<div class="t1">
-	  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central AC
-	  				</div>
-	  				<div class="t1">
-	  				<input type="checkbox" name=""> <img src="./img/heating.png"> Floor heating
-	  				</div>
-	  				<div class="t1">
-					<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
-					</div>
-					<div class="t1">
-					<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
-					</div>
-					<div class="t1">
-					<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
-					</div>
-					<div class="t1">
-					<input type="checkbox" name=""> <img src="./img/warmwall.png "> Radiators
-					</div>
-					<div class="t1">
-					<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
-					</div>
-					<div class="t1">
-					<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
-					</div>
 				</div>
 				<br>
-				<div class="center">
-					<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-	  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
-	  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
-					</svg>Reset Form</button>
-					<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
-				</div>
+				<div id="showOne" class="myDiv">
+					<span class="title t1"><img src="./img/calc.png"> Monthly RMB</span>
+					<!-- Range Slider -->
+					
+					<div slider id="slider-distance">
+					  <div>
+					    <div inverse-left style="width:70%;"></div>
+					    <div inverse-right style="width:70%;"></div>
+					    <div range style="left:0%;right:0%;"></div>
+					    <span thumb style="left:0%;"></span>
+					    <span thumb style="left:100%;"></span>
+					    <div sign style="left:0%;">
+					      <span id="value">0</span>
+					    </div>
+					    <div sign style="left:100%;">
+					      <span id="value">300000</span>
+					    </div>
+					  </div>
+					  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[1].style.width=value+'%';
+					  children[5].style.left=value+'%';
+					  children[7].style.left=value+'%';children[11].style.left=value+'%';
+					  children[11].childNodes[1].innerHTML=this.value;" />
+
+					  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[3].style.width=(100-value)+'%';
+					  children[5].style.right=(100-value)+'%';
+					  children[9].style.left=value+'%';children[13].style.left=value+'%';
+					  children[13].childNodes[1].innerHTML=this.value;" />
+					</div>
+
+
+	  				<!-- Possible <br> -->
+	  				<div class="checkb1">
+	  					<div class="t1">
+		  				<input type="checkbox" name=""> <img src="./img/AC.png" width="17" height="17"> Central AC
+		  				</div>
+		  				<div class="t1">
+		  				<input type="checkbox" name=""> <img src="./img/heating.png" width="17" height="17"> Floor heating
+		  				</div>
+		  				<div class="t1">
+						<input type="checkbox" name=""> <img src="./img/balcony.png" width="17" height="17"> Balcony 
+						</div>
+						<div class="t1">
+						<input type="checkbox" name=""> <img src="./img/garden.png" width="17" height="17"> Garden
+						</div>
+						<div class="t1">
+						<input type="checkbox" name="" id="openC"> <img src="./img/kitchen.png " width="17" height="17"> Open kitchen
+						</div>
+						<div class="t1">
+						<input type="checkbox" name=""> <img src="./img/warmwall.png " width="17" height="17"> Radiators
+						</div>
+						<div class="t1">
+						<input type="checkbox" name=""> <img src="./img/terrace.png " width="17" height="17"> Terrace
+						</div>
+						<div class="t1">
+						<input type="checkbox" name=""> <img src="./img/energy.png " width="17" height="17"> AVL
+						</div>
+					</div>
+					<br>
+					<div class="center">
+						<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
+		  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
+						</svg>Reset Form</button>
+						<button class="btn btn-primary my-2 my-sm-0" type="submit"  onclick="toggle_visibility('foo');"><i class="fa fa-search"></i> Search</button>
+					</div>
+				</div> <!-- Close first showDiv-->
+				<div id="showTwo" class="myDiv">
+					<span class="TC title3 t3" id="test"><img src="./img/calc.png"> RMB per m² per day </span>
+					<!-- Range Slider -->
+					
+					<div slider id="slider-distance">
+					  <div>
+					    <div inverse-left style="width:70%;"></div>
+					    <div inverse-right style="width:70%;"></div>
+					    <div range style="left:0%;right:0%;"></div>
+					    <span thumb style="left:0%;"></span>
+					    <span thumb style="left:100%;"></span>
+					    <div sign style="left:0%;">
+					      <span id="value">0</span>
+					    </div>
+					    <div sign style="left:100%;">
+					      <span id="value">300000</span>
+					    </div>
+					  </div>
+					  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[1].style.width=value+'%';
+					  children[5].style.left=value+'%';
+					  children[7].style.left=value+'%';children[11].style.left=value+'%';
+					  children[11].childNodes[1].innerHTML=this.value;" />
+
+					  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[3].style.width=(100-value)+'%';
+					  children[5].style.right=(100-value)+'%';
+					  children[9].style.left=value+'%';children[13].style.left=value+'%';
+					  children[13].childNodes[1].innerHTML=this.value;" />
+					</div>
+
+
+	  				<br>
+	  				<div class="checkb1">
+	  					
+						<div class="check2">
+						<input type="checkbox" name=""> <img src="./img/energy.png " width="17" height="17"> AVL
+						</div>
+				<select style="width: 230px; height: 30px;" class="Features2" id="test">
+					<option value="X" selected disabled hidden>Features</option>
+					<option value="X">All</option>
+					<option value="X">Different feature</option>
+					<option value="X">Different feature</option>
+					<option value="X">Different feature</option>
+				</select>
+					</div>
+
+					<br>
+					<div class="center">
+						<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
+		  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
+						</svg>Reset Form</button>
+						<button class="btn btn-primary my-2 my-sm-0" type="submit"  onclick="toggle_visibility('foo');"><i class="fa fa-search"></i> Search</button>
+					</div>
+				</div> <!-- Close second showDiv-->
 			</form>
 		</div>
 
@@ -178,7 +272,7 @@
 				  </button>
 				  <div class="search-filter2" id="foo2">
 	   		<form action="" id="options">
-				<select>
+				<select style="width: 260px; margin-bottom: 10px;" id="typeselect">
 				    <option value="" disabled selected hidden>Type</option>
 				    <option value="All">All</option>
 				    <option value="MAp">Modern Apartement</option>
@@ -186,9 +280,9 @@
 				    <option value="Villa">Villa</option>
 				    <option value="THouse">Lane House</option>
 				    <option value="IHouse">Garden House</option>
-				    <option value="COffice">Creative Office</option>
+				    <option value="OC">Creative Office</option>
 				</select><br>
-				<select>
+				<select style="width: 260px; margin-bottom: 10px;">
 				    <option value="" disabled hidden selected>Location</option>
 				    <option value="All">All</option>
 				    <option value="FCons">French consession</option>
@@ -197,29 +291,54 @@
 				    <option value="">Lujiazui</option>
 				    <option value="">World Park and Biyun Community</option>
 				</select><br>
-				<select>
-				    <option value="" selected disabled hidden>Type</option>
+				<select style="width: 260px; margin-bottom: 10px;">
+				    <option value="" selected disabled hidden>Layout</option>
 				    <option value="All">All</option>
 				    <option value="1BR">1 Bedroom</option>
 				   	<option value="2BR">2 Bedrooms</option>
 				   	<option value="3BR">3 Bedrooms</option>
 				</select><br>
-				<select>
-					<option value="" selected disabled hidden>Characteristics</option>
+				<select style="width: 260px;">
+					<option value="" selected disabled hidden>Features</option>
 					<option value="All">All</option>
 					<option value="TFM">Top-floor mansion</option>
 					<option value="">Overlay Room</option>
 					<option value="">Compound</option>
 				</select>
 				<br>
-				<span class="title">Price Range: <br>(RMB)</span><br>
+				<span class="title2"><img src="./img/calc.png"> Monthly RMB</span><br>
 				<!-- Range Slider -->
-				<div class="price-slider2">
-				  <span>from
-				  <input type="number" value="0" min="0" max="300000"/>	<br>to
-				  <input type="number" value="300000" min="0" max="300000"/></span><br>
-				  <input value="0" min="0" max="300000" step="500" type="range"/>
-				  <input value="300000" min="0" max="300000" step="500" type="range"/>				  
+				<div slider2 id="slider-distance">
+				  <div>
+				    <div inverse-left style="width:70%;"></div>
+				    <div inverse-right style="width:70%;"></div>
+				    <div range style="left:0%;right:0%;"></div>
+				    <span thumb style="left:0%;"></span>
+				    <span thumb style="left:100%;"></span>
+				    <div sign style="left:0%;">
+				      <span id="value">0</span>
+				    </div>
+				    <div sign style="left:100%;">
+				      <span id="value">300000</span>
+				    </div>
+				  </div>
+				  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+				  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+				  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+				  var children = this.parentNode.childNodes[1].childNodes;
+				  children[1].style.width=value+'%';
+				  children[5].style.left=value+'%';
+				  children[7].style.left=value+'%';children[11].style.left=value+'%';
+				  children[11].childNodes[1].innerHTML=this.value;" />
+
+				  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+				  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+				  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+				  var children = this.parentNode.childNodes[1].childNodes;
+				  children[3].style.width=(100-value)+'%';
+				  children[5].style.right=(100-value)+'%';
+				  children[9].style.left=value+'%';children[13].style.left=varalue+'%';
+				  children[13].childNodes[1].innerHTML=this.value;" />
 				</div>
   				<!-- Possible <br> -->
   				<div class="checkb2">
@@ -229,22 +348,22 @@
 	  				<div class="t2">
 	  				<input type="checkbox" name=""> <img src="./img/heating.png"> Floor heating
 	  				</div>
-	  				<div class="t2">
+	  				<div class="OC t2">
 					<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
 					</div>
-					<div class="t2">
+					<div class="OC t2">
 					<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
 					</div>
-					<div class="t2">
+					<div class="OC t2">
 					<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
 					</div>
 					<div class="t2">
 					<input type="checkbox" name=""> <img src="./img/warmwall.png "> Radiators
 					</div>
-					<div class="t2">
+					<div class="OC t2">
 					<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
 					</div>
-					<div class="t2">
+					<div class="OC t2">
 					<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
 					</div>
 				</div>
@@ -254,7 +373,7 @@
 	  				<path fill-rule="evenodd" d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z"/>sss
 	  				<path fill-rule="evenodd" d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z"/>
 					</svg>Reset Form</button>
-					<button class="btn btn-primary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Search</button>
+					<button class="btn btn-primary my-2 my-sm-0" type="submit"  onclick="toggle_visibility('foo2');"><i class="fa fa-search"></i> Search</button>
 				</div>
 			</form>
 		</div>
@@ -270,11 +389,11 @@
 	<div class="sidenav1">
 		<a href="#loc1">
 		<img src="./img/apartementslogoblack.png" data-toggle="tooltip" data-placement="right" title="Modern Apartements" onmouseover="this.src='./img/apartementslogo.png';" onmouseout="this.src='./img/apartementslogoblack.png';"></a><br>
-		<a href="#loc2" data-toggle="tooltip" data-placement="right" title="Old Apartements"><img src="./img/oldapartements.png"></a><br>
+		<a href="#loc2" data-toggle="tooltip" data-placement="right" title="Old Apartements"><img src="./img/oldapartements.png" onmouseover="this.src='./img/oldapartementswhite.png';" onmouseout="this.src='./img/oldapartements.png';"></a><br>
 		<a href="#loc3" data-toggle="tooltip" data-placement="right" title="Villas"><img src="./img/villalogoblack.png" onmouseover="this.src='./img/villalogowhite.png';" onmouseout="this.src='./img/villalogoblack.png';"></a><br>
 		<a href="#loc4" data-toggle="tooltip" data-placement="right" title="Lane Houses"><img src="./img/inlinehousesblack.png" onmouseover="this.src='./img/inlinehouseswhite.png';" onmouseout="this.src='./img/inlinehousesblack.png';"></a><br>
-		<a href="#loc5" data-toggle="tooltip" data-placement="right" title="Garden Houses"><img src="./img/traditional.png"></a><br>
-		<a href="#loc6" data-toggle="tooltip" data-placement="right" title="Creative Offices"><img src="./img/officeslogoblack.png"></a><br>
+		<a href="#loc5" data-toggle="tooltip" data-placement="right" title="Garden Houses"><img src="./img/traditional.png" onmouseover="this.src='./img/traditionalwhite.png';" onmouseout="this.src='./img/traditional.png';"></a><br>
+		<a href="#loc6" data-toggle="tooltip" data-placement="right" title="Creative Offices"><img src="./img/officeslogoblack.png" onmouseover="this.src='./img/officeslogowhite.png';" onmouseout="this.src='./img/officeslogoblack.png';"></a><br>
 	</div>
 	<div class="loc1">
 		<div class="card">
@@ -324,7 +443,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -345,7 +464,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -366,7 +485,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -387,7 +506,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -408,7 +527,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -429,7 +548,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -506,7 +625,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -527,7 +646,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -548,7 +667,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -569,7 +688,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -590,7 +709,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -611,7 +730,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -620,7 +739,7 @@
 		  		<span class="DateLU">X</span>
 		  	</div>
 		  </div>
-		  <div class="pricing">Price/Month</div>
+		  <div class="pricing card-non-vis-mob">Price/Month</div>
 		  <div class="container">
 		    <h4><b>Area</b></h4>
 		    <div class="address">Address</div>
@@ -688,7 +807,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -709,7 +828,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -730,7 +849,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -751,7 +870,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -772,7 +891,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -793,7 +912,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -870,7 +989,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -891,7 +1010,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -912,7 +1031,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -933,7 +1052,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -954,7 +1073,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -975,7 +1094,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1052,7 +1171,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1073,7 +1192,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1094,7 +1213,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1115,7 +1234,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1136,7 +1255,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1157,7 +1276,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1231,7 +1350,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1252,7 +1371,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1273,7 +1392,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1294,7 +1413,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1315,7 +1434,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1336,7 +1455,7 @@
 			</div>
 		  </div> 
 		</div>
-		<div class="card">
+		<div class="card card-non-vis-mob">
 		 <div class="container1" id="container1">
 		  <span class="exInfo" id="exInfo">More Information goes here </span>
 		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
@@ -1369,6 +1488,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     <script type="text/javascript">
     	function toggle_visibility(id) {
        var e = document.getElementById(id);
@@ -1427,6 +1547,7 @@
 		 
 		})();
 
+
 		function updateTextInput(val) {
           document.getElementById('textInput').value=val; 
         }
@@ -1471,6 +1592,30 @@
 		  });
 		 
 		})();
+
+       
+$(document).ready(function(){
+    $('#myselection').on('change', function(){
+        var demovalue = $(this).val(); 
+        $("div.myDiv").hide();
+        $("#show"+demovalue).show();
+    });
+});
+
+$(document).ready(function(){
+    $('#myselection').on('change', function() {
+      if ( this.value == 'Two')
+      {
+        $("#Location").hide();
+        $("#Layout").hide();
+      }
+      else
+      {
+        $("#Location").show();
+        $("#Layout").show();
+      }
+    });
+});
     </script>
 </body>
 </html>
