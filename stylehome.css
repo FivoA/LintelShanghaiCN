@@ -740,8 +740,14 @@ div[slider2] > input[type=range]::-ms-tooltip {
  	margin-left: 350px;
  }
  .title2 {
- 	margin-left: 70px;
+ 	margin-left: 75px;
  	margin-top: 15px;
+ }
+ .title4 {
+ 	margin-left: 50px;
+ }
+ .ckb2 {
+ 	margin-left: 100px;
  }
 .checkb1 {	
 	display: grid;

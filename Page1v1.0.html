@@ -99,7 +99,7 @@
 				    <option value="One">Garden House</option>
 				    <option value="Two">Creative Office</option>
 				</select>
-				<select style="width: 230px; height: 30px;" id="Location">
+				<select style="width: 230px; height: 30px;">
 				    <option value="" disabled hidden selected>Location</option>
 				    <option value="X">All</option>
 				    <option value="X">French consession</option>
@@ -115,7 +115,7 @@
 				   	<option value="X">2 Bedrooms</option>
 				   	<option value="X">3 Bedrooms</option>
 				</select>
-				<select style="width: 230px; height: 30px;" class="Two Vall">
+				<select style="width: 230px; height: 30px;" id="Features1">
 					<option value="" selected disabled hidden>Features</option>
 					<option value="X">All</option>
 					<option value="X">Top-floor mansion</option>
@@ -272,15 +272,15 @@
 				  </button>
 				  <div class="search-filter2" id="foo2">
 	   		<form action="" id="options">
-				<select style="width: 260px; margin-bottom: 10px;" id="typeselect">
+				<select style="width: 260px; margin-bottom: 10px;" id="myselection2">
 				    <option value="" disabled selected hidden>Type</option>
-				    <option value="All">All</option>
-				    <option value="MAp">Modern Apartement</option>
-				    <option value="OAp">Old Apartement</option>
-				    <option value="Villa">Villa</option>
-				    <option value="THouse">Lane House</option>
-				    <option value="IHouse">Garden House</option>
-				    <option value="OC">Creative Office</option>
+				    <option value="One">All</option>
+				    <option value="One">Modern Apartement</option>
+				    <option value="One">Old Apartement</option>
+				    <option value="One">Villa</option>
+				    <option value="One">Lane House</option>
+				    <option value="One">Garden House</option>
+				    <option value="Two">Creative Office</option>
 				</select><br>
 				<select style="width: 260px; margin-bottom: 10px;">
 				    <option value="" disabled hidden selected>Location</option>
@@ -291,14 +291,14 @@
 				    <option value="">Lujiazui</option>
 				    <option value="">World Park and Biyun Community</option>
 				</select><br>
-				<select style="width: 260px; margin-bottom: 10px;">
+				<select style="width: 260px; margin-bottom: 10px;" id="Layout2">
 				    <option value="" selected disabled hidden>Layout</option>
 				    <option value="All">All</option>
 				    <option value="1BR">1 Bedroom</option>
 				   	<option value="2BR">2 Bedrooms</option>
 				   	<option value="3BR">3 Bedrooms</option>
 				</select><br>
-				<select style="width: 260px;">
+				<select style="width: 260px;" id="Features3">
 					<option value="" selected disabled hidden>Features</option>
 					<option value="All">All</option>
 					<option value="TFM">Top-floor mansion</option>
@@ -306,67 +306,113 @@
 					<option value="">Compound</option>
 				</select>
 				<br>
-				<span class="title2"><img src="./img/calc.png"> Monthly RMB</span><br>
-				<!-- Range Slider -->
-				<div slider2 id="slider-distance">
-				  <div>
-				    <div inverse-left style="width:70%;"></div>
-				    <div inverse-right style="width:70%;"></div>
-				    <div range style="left:0%;right:0%;"></div>
-				    <span thumb style="left:0%;"></span>
-				    <span thumb style="left:100%;"></span>
-				    <div sign style="left:0%;">
-				      <span id="value">0</span>
-				    </div>
-				    <div sign style="left:100%;">
-				      <span id="value">300000</span>
-				    </div>
-				  </div>
-				  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
-				  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-				  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-				  var children = this.parentNode.childNodes[1].childNodes;
-				  children[1].style.width=value+'%';
-				  children[5].style.left=value+'%';
-				  children[7].style.left=value+'%';children[11].style.left=value+'%';
-				  children[11].childNodes[1].innerHTML=this.value;" />
+				<div id="shotOne" class="myDiv2">
+					<span class="title2"><img src="./img/calc.png"> Monthly RMB</span><br>
+					<!-- Range Slider -->
+					<div slider2 id="slider-distance">
+					  <div>
+					    <div inverse-left style="width:70%;"></div>
+					    <div inverse-right style="width:70%;"></div>
+					    <div range style="left:0%;right:0%;"></div>
+					    <span thumb style="left:0%;"></span>
+					    <span thumb style="left:100%;"></span>
+					    <div sign style="left:0%;">
+					      <span id="value">0</span>
+					    </div>
+					    <div sign style="left:100%;">
+					      <span id="value">300000</span>
+					    </div>
+					  </div>
+					  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[1].style.width=value+'%';
+					  children[5].style.left=value+'%';
+					  children[7].style.left=value+'%';children[11].style.left=value+'%';
+					  children[11].childNodes[1].innerHTML=this.value;" />
 
-				  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
-				  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-				  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-				  var children = this.parentNode.childNodes[1].childNodes;
-				  children[3].style.width=(100-value)+'%';
-				  children[5].style.right=(100-value)+'%';
-				  children[9].style.left=value+'%';children[13].style.left=varalue+'%';
-				  children[13].childNodes[1].innerHTML=this.value;" />
+					  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[3].style.width=(100-value)+'%';
+					  children[5].style.right=(100-value)+'%';
+					  children[9].style.left=value+'%';children[13].style.left=varalue+'%';
+					  children[13].childNodes[1].innerHTML=this.value;" />
+					</div>
+	  				<!-- Possible <br> -->
+	  				<div class="checkb2">
+	  					<div class="t2">
+		  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central AC
+		  				</div>
+		  				<div class="t2">
+		  				<input type="checkbox" name=""> <img src="./img/heating.png"> Floor heating
+		  				</div>
+		  				<div class="OC t2">
+						<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
+						</div>
+						<div class="OC t2">
+						<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
+						</div>
+						<div class="OC t2">
+						<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
+						</div>
+						<div class="t2">
+						<input type="checkbox" name=""> <img src="./img/warmwall.png "> Radiators
+						</div>
+						<div class="OC t2">
+						<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
+						</div>
+						<div class="OC t2">
+						<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
+						</div>
+					</div>
 				</div>
-  				<!-- Possible <br> -->
-  				<div class="checkb2">
-  					<div class="t2">
-	  				<input type="checkbox" name=""> <img src="./img/AC.png"> Central AC
-	  				</div>
-	  				<div class="t2">
-	  				<input type="checkbox" name=""> <img src="./img/heating.png"> Floor heating
-	  				</div>
-	  				<div class="OC t2">
-					<input type="checkbox" name=""> <img src="./img/balcony.png"> Balcony 
+
+				<div id="shotTwo" class="myDiv2">
+					<span class="title2 title4"><img src="./img/calc.png"> RMD per m² per day</span><br>
+					<!-- Range Slider -->
+					<div slider2 id="slider-distance">
+					  <div>
+					    <div inverse-left style="width:70%;"></div>
+					    <div inverse-right style="width:70%;"></div>
+					    <div range style="left:0%;right:0%;"></div>
+					    <span thumb style="left:0%;"></span>
+					    <span thumb style="left:100%;"></span>
+					    <div sign style="left:0%;">
+					      <span id="value">0</span>
+					    </div>
+					    <div sign style="left:100%;">
+					      <span id="value">300000</span>
+					    </div>
+					  </div>
+					  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[1].style.width=value+'%';
+					  children[5].style.left=value+'%';
+					  children[7].style.left=value+'%';children[11].style.left=value+'%';
+					  children[11].childNodes[1].innerHTML=this.value;" />
+
+					  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[3].style.width=(100-value)+'%';
+					  children[5].style.right=(100-value)+'%';
+					  children[9].style.left=value+'%';children[13].style.left=varalue+'%';
+					  children[13].childNodes[1].innerHTML=this.value;" />
 					</div>
-					<div class="OC t2">
-					<input type="checkbox" name=""> <img src="./img/garden.png"> Garden
-					</div>
-					<div class="OC t2">
-					<input type="checkbox" name=""> <img src="./img/kitchen.png "> Open kitchen
-					</div>
-					<div class="t2">
-					<input type="checkbox" name=""> <img src="./img/warmwall.png "> Radiators
-					</div>
-					<div class="OC t2">
-					<input type="checkbox" name=""> <img src="./img/terrace.png "> Terrace
-					</div>
-					<div class="OC t2">
-					<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
+	  				<!-- Possible <br> -->
+	  				<div class="checkb2">
+						<div class="OC ckb2">
+						<input type="checkbox" name=""> <img src="./img/energy.png "> AVL
+						</div>
 					</div>
 				</div>
+
 				<br>
 				<div class="center">
 					<button class="btn btn-primary my-2 my-sm-0 reset" type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -1606,13 +1652,35 @@ $(document).ready(function(){
     $('#myselection').on('change', function() {
       if ( this.value == 'Two')
       {
-        $("#Location").hide();
         $("#Layout").hide();
+        $("#Features1").hide();
       }
       else
       {
-        $("#Location").show();
         $("#Layout").show();
+        $("#Features1").show();
+      }
+    });
+});
+$(document).ready(function(){
+    $('#myselection2').on('change', function(){
+        var demovalue = $(this).val(); 
+        $("div.myDiv2").hide();
+        $("#shot"+demovalue).show();
+    });
+});
+
+$(document).ready(function(){
+    $('#myselection2').on('change', function() {
+      if ( this.value == 'Two')
+      {
+        $("#Features3").hide();
+        $("#Layout2").hide();
+      }
+      else
+      {
+        $("#Features3").show();
+        $("#Layout2").show();
       }
     });
 });
