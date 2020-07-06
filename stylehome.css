@@ -762,61 +762,16 @@ div[slider2] > input[type=range]::-ms-tooltip {
 }
 
 /* Phone Media Queries and Responsiveness */
-@media only screen  /* Iphone 5, 5S, 5C and 5SE */
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-  	.loc1 {
-		grid-template-columns: repeat(1, 1fr);
-		margin-left: 0rem;
-		margin-right: 0rem;
-	}
-	.Header {
-		height: 165vh;
-	}
-	.filter {
-		display: none;
-	}
-	.margleft {
-		margin-left: 40px;
-	}
-	.filter2 {
-		background-color: white;
-		color: #46c2db;
-		display: block;
-		margin-top: 290px;
-		margin-left: 130px;
-	}
-	.filter2:hover {
-		background-color: white;
-		color: #46c2db;
-	}
-	.search-filter2 {
-	height: 505px;
-	width: 47vh;
-	background-color: white;
-	margin-top: 10px;
-	margin-left: 28px;
- 	display: none; 
- 	padding: 3px;
 
-}	
-	h1 {
-		margin-top: 30px;
-	}
-}
-@media only screen  /* Iphone 6/7/8 */
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
+
+@media (max-width: 896px) {
   	.loc1 {
 		grid-template-columns: repeat(1, 1fr);
 		margin-left: 0rem;
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 145vh;
+		height: 120vh;
 	}
 	.filter {
 		display: none;
@@ -828,8 +783,8 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 325px;
-		margin-left: 150px;
+		margin-top: 355px;
+		margin-left: 162px;
 	}
 	.filter2:hover {
 		background-color: white;
@@ -837,17 +792,14 @@ div[slider2] > input[type=range]::-ms-tooltip {
 	}
 	.search-filter2 {
 	height: 505px;
-	width: 40vh;
+	width: 33vh;
 	background-color: white;
 	margin-top: 10px;
 	margin-left: 50px;
  	display: none; 
  	padding: 3px;
 }	
-		
-}	
-@media only screen  /* Iphone X */
-  and (min-device-width: 375px) 
+@media only screen  /* Iphone X */ 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
@@ -884,10 +836,9 @@ div[slider2] > input[type=range]::-ms-tooltip {
 	margin-left: 50px;
  	display: none; 
  	padding: 3px;
-}			
-}	
+	}			
+}
 @media only screen  /* Iphone 6/7/8 Plus */
-  and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
@@ -924,16 +875,19 @@ div[slider2] > input[type=range]::-ms-tooltip {
 	margin-left: 50px;
  	display: none; 
  	padding: 3px;
-}	
+	}		
 }
-@media (max-width: 808px) {
+@media only screen  /* Iphone 6/7/8 */ 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
   	.loc1 {
 		grid-template-columns: repeat(1, 1fr);
 		margin-left: 0rem;
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 120vh;
+		height: 145vh;
 	}
 	.filter {
 		display: none;
@@ -945,8 +899,8 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 356px;
-		margin-left: 162px;
+		margin-top: 335px;
+		margin-left: 150px;
 	}
 	.filter2:hover {
 		background-color: white;
@@ -954,11 +908,54 @@ div[slider2] > input[type=range]::-ms-tooltip {
 	}
 	.search-filter2 {
 	height: 505px;
-	width: 33vh;
+	width: 40vh;
 	background-color: white;
 	margin-top: 10px;
 	margin-left: 50px;
  	display: none; 
  	padding: 3px;
+	}	
+		
 }	
+@media only screen  /* Iphone 6, 7 and 8 */
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.loc1 {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.Header {
+		height: 165vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 326px;
+		margin-left: 150px;
+	}
+	.filter2:hover {
+		background-color: white;
+		color: #46c2db;
+	}
+	.search-filter2 {
+	height: 505px;
+	width: 47vh;
+	background-color: white;
+	margin-top: 10px;
+	margin-left: 28px;
+ 	display: none; 
+ 	padding: 3px;
 
+	}	
+	h1 {
+		margin-top: 30px;
+	}
+}
