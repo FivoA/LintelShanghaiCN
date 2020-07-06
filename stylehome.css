@@ -857,7 +857,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 105vh;
+		height: 125vh;
 	}
 	.filter {
 		display: none;
@@ -869,8 +869,8 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 415px;
-		margin-left: 160px;
+		margin-top: 375px;
+		margin-left: 151px;
 	}
 	.filter2:hover {
 		background-color: white;
@@ -884,8 +884,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 	margin-left: 50px;
  	display: none; 
  	padding: 3px;
-}	
-		
+}			
 }	
 @media only screen  /* Iphone 6/7/8 Plus */
   and (min-device-width: 414px) 
@@ -927,3 +926,38 @@ div[slider2] > input[type=range]::-ms-tooltip {
  	padding: 3px;
 }	
 }
+@media (max-width: 808px) {
+  	.loc1 {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.Header {
+		height: 113vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 390px;
+		margin-left: 162px;
+	}
+	.filter2:hover {
+		background-color: white;
+		color: #46c2db;
+	}
+	.search-filter2 {
+	height: 505px;
+	width: 33vh;
+	background-color: white;
+	margin-top: 10px;
+	margin-left: 50px;
+ 	display: none; 
+ 	padding: 3px;
+}	
