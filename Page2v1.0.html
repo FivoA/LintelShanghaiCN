@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Reference to the Bing Maps SDK -->
+    <script type='text/javascript'
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ap2bCHWNU76tHJN5f81dZvCGuVi9Q5OQfrc5Fo2StTkxPBB84IF6OKRYTAFyyxBi' 
+            async defer></script>
+    
+    <script type='text/javascript'>
+    function GetMap()
+    {
+        var map = new Microsoft.Maps.Map('#myMap');
+
+        //Add your post map load code here.
+    }
+    </script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -259,11 +272,11 @@
 		<span class="landlordInfo"> Landlord: </span><hr>
 		<div class="mInfo3">
 			<div class="landlordContact">
-				<img src="./img/landlordlogo.png">
+				<img src="./img/landlordlogo.png" style="margin-top: -5px;">
 				<span class="landlordInf"> Contact LL </span>
 			</div>
 			<div class="landlordPhone">
-				<img src="./img/phonelogosmall.png">
+				<img src="./img/phonelogosmall.png" style="margin-top: -5px;">
 				<span class="landlordPhoneInf">NumberXX </span>
 			</div>
 			<div class="ContactBTN">
@@ -274,6 +287,7 @@
 	</div>
 	<div class="LocationMap">
 		<!--Map with the accurate Location -->
+		<div id="myMap" style="position:absolute;width:1020px;height:50vh;"></div>
 	</div>
 	<div class="ListingHeader">
 		<!-- Header for listing grid -->
