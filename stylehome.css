@@ -933,7 +933,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 113vh;
+		height: 120vh;
 	}
 	.filter {
 		display: none;
@@ -945,7 +945,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 390px;
+		margin-top: 375px;
 		margin-left: 162px;
 	}
 	.filter2:hover {
