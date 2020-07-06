@@ -10,7 +10,6 @@ a {
 a:hover {
 	color: white;
 }
-svg {}
 .Header {
 	height: 70vh;
 	background-image: url(./img/livingroom.jpg);
@@ -783,8 +782,8 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 365px;
-		margin-left: 166px;
+		margin-top: 355px;
+		margin-left: 162px;
 	}
 	.filter2:hover {
 		background-color: white;
@@ -821,7 +820,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 375px;
+		margin-top: 390px;
 		margin-left: 151px;
 	}
 	.filter2:hover {
