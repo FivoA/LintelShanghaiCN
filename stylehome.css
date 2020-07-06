@@ -21,7 +21,7 @@ svg {}
 }
 .sidenav1 {
 	float: right;
-	margin-right: 200px;
+	margin-right: 150px;
 	position: sticky;
 	top: 0;
 }
@@ -106,11 +106,11 @@ svg {}
 }
 .loc1 {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 275px);
 	justify-content: center;
 	margin-left: 16rem;
 	margin-right: 16rem;
-	grid-gap: 10px;
+	grid-gap: 15px;
 }
 nav select {
 	display: none;
@@ -185,39 +185,6 @@ nav img {
 		color: #46c2db;
 		display: none;
 	}
-
-@media only screen 
-  and (min-device-width: 350px) 
-  and (max-device-width: 800px) 
-  and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-  	.loc1 {
-		grid-template-columns: repeat(1, 1fr);
-		margin-left: 0rem;
-		margin-right: 0rem;
-	}
-	.Header {
-		height: 120vh;
-	}
-	.filter {
-		display: none;
-	}
-	.margleft {
-		margin-left: 40px;
-	}
-	.filter2 {
-		background-color: white;
-		color: #46c2db;
-		display: block;
-		margin-top: 360px;
-		margin-left: 150px;
-	}
-	.filter2:hover {
-		background-color: white;
-		color: #46c2db;
-	}
-		
-}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: all 0.5s;
@@ -367,8 +334,6 @@ footer a:hover {
 }
 .myDiv2 {
 	display: none;
-}
-@media (max-width: 1600px) {
 }
 form select {
 	background-color: white;
@@ -794,4 +759,171 @@ div[slider2] > input[type=range]::-ms-tooltip {
 }
 .Features2 {
 	grid-column-start: span 2;
+}
+
+/* Phone Media Queries and Responsiveness */
+@media only screen  /* Iphone 5, 5S, 5C and 5SE */
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  	.loc1 {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.Header {
+		height: 160vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 290px;
+		margin-left: 130px;
+	}
+	.filter2:hover {
+		background-color: white;
+		color: #46c2db;
+	}
+	.search-filter2 {
+	height: 505px;
+	width: 47vh;
+	background-color: white;
+	margin-top: 10px;
+	margin-left: 28px;
+ 	display: none; 
+ 	padding: 3px;
+
+}	
+	h1 {
+		margin-top: 30px;
+	}
+}
+@media only screen  /* Iphone 6/7/8 */
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+  	.loc1 {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.Header {
+		height: 140vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 310px;
+		margin-left: 150px;
+	}
+	.filter2:hover {
+		background-color: white;
+		color: #46c2db;
+	}
+	.search-filter2 {
+	height: 505px;
+	width: 40vh;
+	background-color: white;
+	margin-top: 10px;
+	margin-left: 50px;
+ 	display: none; 
+ 	padding: 3px;
+}	
+		
+}	
+@media only screen  /* Iphone X */
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  	.loc1 {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.Header {
+		height: 125vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 375px;
+		margin-left: 150px;
+	}
+	.filter2:hover {
+		background-color: white;
+		color: #46c2db;
+	}
+	.search-filter2 {
+	height: 505px;
+	width: 33vh;
+	background-color: white;
+	margin-top: 10px;
+	margin-left: 50px;
+ 	display: none; 
+ 	padding: 3px;
+}	
+		
+}	
+@media only screen  /* Iphone 6/7/8 Plus */
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+  	.loc1 {
+		grid-template-columns: repeat(1, 1fr);
+		margin-left: 0rem;
+		margin-right: 0rem;
+	}
+	.Header {
+		height: 130vh;
+	}
+	.filter {
+		display: none;
+	}
+	.margleft {
+		margin-left: 40px;
+	}
+	.filter2 {
+		background-color: white;
+		color: #46c2db;
+		display: block;
+		margin-top: 330px;
+		margin-left: 160px;
+	}
+	.filter2:hover {
+		background-color: white;
+		color: #46c2db;
+	}
+	.search-filter2 {
+	height: 505px;
+	width: 37vh;
+	background-color: white;
+	margin-top: 10px;
+	margin-left: 50px;
+ 	display: none; 
+ 	padding: 3px;
+}	
 }
