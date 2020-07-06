@@ -772,7 +772,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 160vh;
+		height: 165vh;
 	}
 	.filter {
 		display: none;
@@ -816,7 +816,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		margin-right: 0rem;
 	}
 	.Header {
-		height: 140vh;
+		height: 145vh;
 	}
 	.filter {
 		display: none;
@@ -828,7 +828,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 310px;
+		margin-top: 325px;
 		margin-left: 150px;
 	}
 	.filter2:hover {
@@ -910,7 +910,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
 		background-color: white;
 		color: #46c2db;
 		display: block;
-		margin-top: 330px;
+		margin-top: 350px;
 		margin-left: 160px;
 	}
 	.filter2:hover {
