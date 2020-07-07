@@ -76,7 +76,6 @@ nav img {
 }
 .WidthWrap {
 	margin-left: 250px;
-	margin-right: 250px;
 }
 @media (max-width: 991px) {
 	nav select {
@@ -226,13 +225,14 @@ button img {
 	
 }
 .LocationMap {
-	height: 50vh;
+	height: 340px;
 	margin-bottom: 50px;
 }
 .PropListing {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 10px;
+	margin-right: 250px;
 }
 .ListingHeader {
 	font-weight: bold;
@@ -307,6 +307,7 @@ footer a:hover {
 }
 .expandBtn {
 	text-align: center;
+	margin-right: 250px;
 }
 .Dropdown {
 	display: none;
