@@ -11,16 +11,19 @@ a:hover {
 	color: white;
 }
 .Header {
-	height: 70vh;
+	min-height: 70vh;
 	background-image: url(./img/livingroom.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	justify-content: center;
     align-items: center;	
 }
+.main-content {
+	position: relative;
+}
 .sidenav1 {
 	float: right;
-	margin-right: 150px;
+	margin-right: 166px;
 	position: sticky;
 	top: 0;
 }
@@ -34,8 +37,8 @@ a:hover {
 	background-color: black;
 }
 .wrap {
-  width: 32%;
-  position: relative;
+  width: 35%;
+  position: absolute;
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -109,7 +112,8 @@ a:hover {
 	justify-content: center;
 	margin-left: 16rem;
 	margin-right: 16rem;
-	grid-gap: 15px;
+	grid-gap: 10px;
+	position: relative;
 }
 nav select {
 	display: none;
@@ -310,6 +314,10 @@ footer {
 .nav-link:hover {
 	text-decoration: underline #46c2db;
 }
+.nav-link {
+	margin-left: 8px;
+	margin-right: 8px;
+}
 footer a:hover {
 		text-decoration: underline #46c2db;
 }
@@ -323,8 +331,9 @@ footer a:hover {
 	height: 242px;
 	width: 191vh;
 	background-color: white;
-	margin-top: 150px;
+	margin-top: 280px;
 	margin-left: 3px;
+	margin-bottom: 10px;
  	display: none; 
  	padding: 3px;
 }
@@ -346,7 +355,9 @@ form label {
 	display: block;
 
 }
-
+.lmargl {
+	margin-left: -5px;
+}
 
 [slider] {
   position: relative;
