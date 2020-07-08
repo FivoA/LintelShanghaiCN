@@ -329,7 +329,7 @@ footer a:hover {
 }
 .search-filter {
 	height: 242px;
-	width: 191vh;
+	width: 100%;
 	background-color: white;
 	margin-top: 280px;
 	margin-left: 3px;
