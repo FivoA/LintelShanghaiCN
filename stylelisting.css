@@ -208,9 +208,14 @@ u {
 .Property {
 	display: grid; 
 	grid-template-columns: 600px 420px;
-	height: 70vh;
+	height: 73vh;
 	position: relative;
 	margin-bottom: 30px;
+}
+.InfoBarAdd {
+	height: 3vh;
+	grid-column-start: span 2;
+	opacity: 0.9;
 }
 .moreInfo {
 	height: 70vh;
