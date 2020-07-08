@@ -22,6 +22,9 @@ nav select {
 nav img {
 	margin-bottom: 4px;
 }
+u {
+ 	text-decoration: underline #46c2db;
+}
 .psup {
 	box-shadow: 0 4px 8px 0 black;
 	background-color: #46c2db;
