@@ -225,7 +225,18 @@ u {
 }
 .LocationMap {
 	height: 340px;
+}
+.MapOptions {
+	margin-top: 10px;
+	height: 4vh;
 	margin-bottom: 50px;
+	width: 1020px;
+	display: grid;
+	grid-template-columns: 104px 110px 84px 113px 150px 145px 160px 160px;
+	align-content: center;
+}
+.MapOptions img {
+	margin-top: -6px;
 }
 .PropListing {
 	display: grid;
