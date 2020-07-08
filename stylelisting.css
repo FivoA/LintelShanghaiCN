@@ -511,6 +511,7 @@ div[slider] > input[type=range]::-ms-tooltip {
   opacity: 1;
 }
 .PriceRange {
+	width: 10%;
 	display: block;
 	margin-top: 33px;
 	color: #46c2db;
