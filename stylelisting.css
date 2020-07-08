@@ -13,7 +13,7 @@ footer {
 a {
 	color: white;
 }
-a:hover {
+a:hover {	
 	color: white;
 }
 nav select {
@@ -122,16 +122,7 @@ u {
 .form-control:focus {
 	border-color: #46c2db;
 }
-#mapButton{
-	width: 70px;
-	height: 35px;
-	background-image: url(./img/mapButtonBG.png);
-	border: none;
-	margin-left: 620px;
-}
-button img {
-	margin-top: -5px;
-}
+
 .infoBar {
 	width: 100%;
 	background-color: #E5E4E2;
