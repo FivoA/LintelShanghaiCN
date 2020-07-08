@@ -176,6 +176,18 @@ u {
 .LocationContent a:hover {
 	color: #46c2db;
 }
+.moreLocs {
+	margin-top: 20px;
+	margin-left: 90px;
+}
+.moreLocs a {
+	color: black;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.moreLocs a:hover {
+	color: #46c2db;
+}
 .LayoutHeader {
 	color: #46c2db;	
 }
