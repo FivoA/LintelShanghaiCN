@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="stylelisting.css">
+	<link rel="stylesheet" type="text/css" href="stylelistingoffice.css">
 
 	<title>Property Listing</title>
 </head>
@@ -204,11 +204,9 @@
 				<a href="#">Bund Area</a>
 				<a href="#">Century Park & Green City</a>
 			</div>
-			<div class="PriceRange">
-				<img src="./img/calc.png" style="margin-top: -3px;">
-				<span> Monthly RMB:</span>
-			</div>
-			<div slider id="slider-distance" style="margin-left: 140px;">
+			<span class="PriceRange"><img src="./img/calc.png"> RMB/m²/day </span>
+					<!-- Range Slider -->	
+					<div slider id="slider-distance" style="margin-left: 140px;">
 					  <div>
 					    <div inverse-left style="width:70%;"></div>
 					    <div inverse-right style="width:70%;"></div>
@@ -219,10 +217,10 @@
 					      <span id="value">0</span>
 					    </div>
 					    <div sign style="left:100%;">
-					      <span id="value">300000</span>
+					      <span id="value">100</span>
 					    </div>
 					  </div>
-					  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+					  <input type="range" tabindex="0" value="0" max="100" min="0" step="1" oninput="
 					  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
 					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
 					  var children = this.parentNode.childNodes[1].childNodes;
@@ -231,7 +229,7 @@
 					  children[7].style.left=value+'%';children[11].style.left=value+'%';
 					  children[11].childNodes[1].innerHTML=this.value;" />
 
-					  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+					  <input type="range" tabindex="0" value="100" max="100" min="0" step="1" oninput="
 					  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
 					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
 					  var children = this.parentNode.childNodes[1].childNodes;
@@ -240,25 +238,17 @@
 					  children[9].style.left=value+'%';children[13].style.left=value+'%';
 					  children[13].childNodes[1].innerHTML=this.value;" />
 					</div>
-					<span class="LayoutHeader"><img src="./img/layoutlogo.png"> Layout</span>
+					<span class="LayoutHeader"><img src="./img/layoutlogo.png" style="margin-top: -5px;"> Building</span>
 					<div class="LayoutContent" style="margin-left: 18px;">
 						<a style="color: #46c2db;"><u>All</u></a>
-						<a href="#">1 Bedroom</a>
-						<a href="#">2 Bedrooms</a>
-						<a href="#">3 Bedrooms</a>
-						<a href="#">4 Bedrooms</a>
-						<a href="#">5 Bedrooms</a>
-						<a href="#">6+ Bedrooms</a>
+						<a href="#">High ceiling</a>
+						<a href="#">Old Building</a>
+						<a href="#">Renovated Building</a>
+						<a href="#">Factory Building</a>
+						<a href="#">Office Bungalows</a>
 					</div><br>
 					<span class="ConfigurationHeader"><img src="./img/configurationlogo.png"> Features</span>
 					<div class="ConfigurationContent" style="margin-left: 18px;">
-						<input type="checkbox" name=""> <img src="./img/AC.png" style="margin-top: -3px;"> Central AC
-						<input type="checkbox" name=""> <img src="./img/heating.png" style="margin-top: -3px;"> Floor heating
-						<input type="checkbox" name=""> <img src="./img/balcony.png" style="margin-top: -3px;"> Balcony
-						<input type="checkbox" name=""> <img src="./img/garden.png" style="margin-top: -3px;"> Garden
-						<input type="checkbox" name=""> <img src="./img/kitchen.png " style="margin-top: -3px;"> Open kitchen
-						<input type="checkbox" name=""> <img src="./img/warmwall.png " style="margin-top: -3px;"> Radiators
-						<input type="checkbox" name=""> <img src="./img/terrace.png " style="margin-top: -3px;"> Terrace
 						<input type="checkbox" name=""> <img src="./img/energy.png " style="margin-top: -3px;"> AVL
 					</div>
 		</div>

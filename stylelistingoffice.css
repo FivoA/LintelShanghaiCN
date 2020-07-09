@@ -1,0 +1,580 @@
+
+.sticky {
+	padding: 10px;
+}
+footer {
+	text-align: center;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	background-color: #454545;
+	color: white;
+}
+a {
+	color: white;
+}
+a:hover {	
+	color: white;
+}
+nav select {
+	display: none;
+}
+nav img {
+	margin-bottom: 4px;
+}
+u {
+ 	text-decoration: underline #46c2db;
+}
+.psup {
+	box-shadow: 0 4px 8px 0 black;
+	background-color: #46c2db;
+}
+.navbar-custom {
+	background-color: #454545;
+	list-style: none;
+}
+.btn-primary {
+	background-color: #46c2db;
+	outline-color: #46c2db;
+	border-radius: 0;
+	border-style: none;
+}
+.btn-primary:hover {
+	background-color: #46c2db;
+	outline-color: #46c2db;
+	border-radius: 0;
+	border-style: none;	
+}
+.btn-primary:active {
+	background-color: #46c2db;
+	outline-color: #46c2db;
+	border-radius: 0;
+	border-style: none;	
+}
+.btn-primary:focus {
+	background-color: #46c2db;
+	outline-color: #46c2db;
+	border-radius: 0;
+	border-style: none;	
+	border-color: none !important;
+    box-shadow:  none !important;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
+	background-color: #46c2db;
+	outline-color: #46c2db;
+	border-radius: 0;
+	border-style: none;	
+}
+.spacel {
+	margin-left: 10px;
+}
+.langs {
+	margin-top: 6px;
+}
+.selectedlang {
+	color: #46c2db;
+}
+.langs a:hover {
+	color: #46c2db;
+}
+.WidthWrap {
+	margin-left: 250px;
+}
+@media (max-width: 991px) {
+	nav select {
+		display: inline-block;
+		background-color: #46c2db;
+		color: white;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		margin-top: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	.Property { 
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.WidthWrap {
+		margin: 0;
+	}
+}
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .dropdown-menu-right{
+		left: 0;
+		right: auto;
+	}
+.dropdown-item.active, .dropdown-item:active {
+	background-color: #46c2db;
+	color: white;
+}
+.closel {
+	margin-left: -11px;
+	border-left: solid #46c2db;
+	height: 38px;
+}
+.wrap {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.search {
+	width: 100%;
+}
+
+.form-control:focus {
+	border-color: #46c2db;
+}
+
+.infoBar {
+	width: 100%;
+	background-color: #E5E4E2;
+	margin-bottom: 20px;
+}
+.infoBar a {
+	color: black;
+}
+.PageInfo {
+	margin-left: 250px;
+}
+.Filter1{
+	height: 8vh;
+	margin-bottom: -20px;
+}
+.TypeHeader {
+	color: #46c2db;
+	margin-right: 25px;
+}
+.TypeHeader img {
+	margin-top: -2px;
+}
+.TypeContent {
+	display: inline-block;
+}
+.TypeContent a {
+	color: black;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+.TypeContent a:hover {
+	color: #46c2db;
+}
+.Filter2 {
+	position: relative;
+}
+.LocationHeader {
+	color: #46c2db;
+}
+.LocationHeader img {
+	margin-top: -7px;
+}
+.LocationContent {
+	display: inline-block;
+}
+.LocationContent a {
+	color: black;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.LocationContent a:hover {
+	color: #46c2db;
+}
+.moreLocs {
+	margin-top: 20px;
+	margin-left: 90px;
+}
+.moreLocs a {
+	color: black;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.moreLocs a:hover {
+	color: #46c2db;
+}
+.LayoutHeader {
+	color: #46c2db;	
+}
+.LayoutContent {
+	display: inline-block;
+	margin-bottom: 19px;
+}
+.LayoutContent a {
+	color: black;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+.LayoutContent a:hover {
+	color: #46c2db;
+}
+.ConfigurationHeader {
+	color: #46c2db;
+}
+.ConfigurationContent {
+	display: inline-block;
+	margin-bottom: 8px;
+}
+.ConfigurationContent input {
+	margin-right: 2px;
+	margin-left: 2px;
+}
+.nav-link:hover {
+	text-decoration: underline #46c2db;
+}
+.Property {
+	display: grid; 
+	grid-template-columns: 600px 420px;
+	height: 73vh;
+	position: relative;
+	margin-bottom: 30px;
+}
+.InfoBarAdd {
+	height: 3vh;
+	grid-column-start: span 2;
+	opacity: 0.9;
+}
+.moreInfo {
+	height: 70vh;
+}
+.PicSpace {
+	
+}
+.LocationMap {
+	height: 340px;
+}
+.MapOptions {
+	margin-top: 10px;
+	height: 4vh;
+	margin-bottom: 50px;
+	width: 1020px;
+	display: grid;
+	grid-template-columns: 104px 110px 84px 113px 150px 145px 160px 160px;
+	align-content: center;
+}
+.MapOptions img {
+	margin-top: -6px;
+}
+.PropListing {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	margin-right: 250px;
+}
+.ListingHeader {
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-bottom: 10px;	
+}
+footer a:hover {
+		text-decoration: underline #46c2db;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.5s;
+  margin-bottom: 10px;
+}
+.card:hover {
+  box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+.lastUpdate {
+	margin-top: -24px;
+	text-align: right;
+	color: white;
+	font-weight: bold;
+}
+.description {
+	text-align: center;
+	opacity: 0.8;
+	margin-bottom: 5px;
+}
+.pricing {
+	background-color: #46c2db;
+	opacity: 0.9;
+	font-weight: bold;
+	color: white;
+	margin-top: -24px;
+	width: 45%;
+	text-align: center;
+}
+.card a {
+	color: black;
+}
+.address{
+	opacity: 0.8;
+	margin-top: -7px;
+	margin-bottom: 7px;
+}
+.mInfo {
+	margin-bottom: 8px;
+	color: #46c2db;
+	text-align: center;
+}
+.container1 {
+	position: relative;
+  	text-align: center;
+}
+#exInfo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	font-weight: bold;
+	font-size: 1,5em;
+}
+#container1:hover #exInfo {
+	display: block;
+	color: white;
+}
+
+.marg-top {
+	margin-top: 10px;
+}
+.expandBtn {
+	text-align: center;
+	margin-right: 250px;
+}
+.Dropdown {
+	display: none;
+}
+[slider] {
+  position: relative;
+  height: 14px;
+  border-radius: 10px;
+  text-align: left;
+  margin: -15px 0 20px 0;
+  width: 40%;
+  margin-left: 500px;
+}
+
+[slider] > div {
+  position: absolute;
+  left: 13px;
+  right: 15px;
+  height: 14px;
+}
+
+[slider] > div > [inverse-left] {
+  position: absolute;
+  left: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+[slider] > div > [inverse-right] {
+  position: absolute;
+  right: 0;
+  height: 9px;
+  border-radius: 10px;
+  background-color: #CCC;
+  margin: 0 7px;
+}
+
+[slider] > div > [range] {
+  position: absolute;
+  left: 0;
+  height: 9px;
+  border-radius: 14px;
+  background-color: #46c2db;
+}
+
+[slider] > div > [thumb] {
+  position: absolute;
+  top: -7px;
+  z-index: 2;
+  height: 21px;
+  width: 21px;
+  text-align: left;
+  margin-left: -11px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  background-color: #FFF;
+  border-radius: 50%;
+  outline: none;
+}
+
+[slider] > input[type=range] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+  height: 14px;
+  top: -2px;
+  width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+div[slider] > input[type=range]::-ms-track {
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type=range]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+
+div[slider] > input[type=range]:focus {
+  outline: none;
+}
+
+div[slider] > input[type=range]::-ms-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type=range]::-moz-range-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type=range]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+  -webkit-appearance: none;
+}
+
+div[slider] > input[type=range]::-ms-fill-lower {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type=range]::-ms-tooltip {
+  display: none;
+}
+
+[slider] > div > [sign] {
+  opacity: 0;
+  position: absolute;
+  margin-left: -17px;
+  top: -45px;
+  z-index:3;
+  background-color: #46c2db;
+  color: #fff;
+  width: 60px;
+  height: 28px;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+[slider] > div > [sign]:after {
+  position: absolute;
+  content: '';
+  left: 0;
+  border-radius: 16px;
+  top: 19px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top-width: 16px;
+  border-top-style: solid;
+  border-top-color: #46c2db;
+}
+
+[slider] > div > [sign] > span {
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+[slider]:hover > div > [sign] {
+  opacity: 1;
+}
+.PriceRange {
+	width: 10%;
+	display: block;
+	margin-top: 33px;
+	color: #46c2db;
+}
+.carousel-item img {
+	height: 70vh;
+	max-height: 70vh;
+}
+.mInfoHeader {
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-left: 10px;
+}
+.mInfoMetro {
+	margin-left: 10px;
+	font-size: 1em;
+}
+.mInfoPrice {
+	margin-left: 10px;
+	font-weight: 600;
+	font-size: 1.4em;
+}
+.basicInfo {
+	font-size: 1em;
+	margin-left: 10px;
+}
+.mInfo1 {
+	display: grid;
+	grid-template-columns: 105px 105px 105px 105px;
+	text-align: center;
+}
+.AreaNum {
+	color: #46c2db;
+	font-weight: bold;
+}
+.featuresInfo {
+	font-size: 1em;
+	margin-left: 12px;
+}
+.mInfo2 {
+	display: grid;
+	grid-template-columns: 95px 95px 95px 95px;
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	grid-gap: 7px;
+}
+.Radiator {
+	opacity: 0.5;
+}
+.TerraceC {
+	opacity: 0.5;
+}
+.landlordInfo {
+	font-size: 1em;
+	margin-left: 12px;
+}
+.mInfo3 {
+	display: grid;
+	grid-template-columns: 220px 220px;
+	text-align: center;
+}
+.ContactBTN {
+	grid-column-start: span 2;
+	margin-top: 7px;
+}
