@@ -245,7 +245,7 @@ div[slider] > input[type=range]::-ms-tooltip {
   opacity: 0;
   position: absolute;
   margin-left: -17px;
-  top: -45px;
+  top: 20px;
   z-index:3;
   background-color: #46c2db;
   color: #fff;
@@ -258,20 +258,6 @@ div[slider] > input[type=range]::-ms-tooltip {
   justify-content: center;
   text-align: center;
 }
-
-[slider] > div > [sign]:after {
-  position: absolute;
-  content: '';
-  left: 0;
-  border-radius: 16px;
-  top: 19px;
-  border-left: 14px solid transparent;
-  border-right: 14px solid transparent;
-  border-top-width: 16px;
-  border-top-style: solid;
-  border-top-color: #46c2db;
-}
-
 [slider] > div > [sign] > span {
   font-size: 15px;
   font-weight: 800;
