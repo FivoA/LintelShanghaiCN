@@ -285,11 +285,23 @@ div[slider] > input[type=range]::-ms-tooltip {
 	display: grid;
 	grid-template-columns: 260px 1259px;
 }
+.mapContainer button {
+  background-color: #46c2db;
+  color: white;
+}
 .ListingSide {
-	height: 86vh;
+	height: 95vh;
 	display: grid;
 	grid-template-columns: 260px;
-	grid-template-rows: 21.5vh 21.5vh 21.5vh 21.5vh;
+	grid-template-rows: 3vh 21.5vh 21.5vh 21.5vh 21.5vh;
+}
+.ListingHeader {
+  text-align: center;
+}
+.ListingHeader a {
+  color: #46c2db;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .AVL {
 	align-self: center;

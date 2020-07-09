@@ -222,6 +222,11 @@
 <!--Map -->
 <div class="mapContainer">
 <div class="ListingSide">
+	<div class="ListingHeader">
+		<a href="#">Option</a>
+		<a href="#">Option</a>
+		<a href="#">Option</a>
+	</div>
 	<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
 		 <div class="container1" id="container1">
 		 	<div class="Address">
@@ -268,7 +273,7 @@
 			</div>
 		  </div> 
 		</div>
-	<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+	<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card" style="margin-bottom: 5px;">
 		 <div class="container1" id="container1">
 		 	<div class="Address">
 		  	Address here
@@ -314,10 +319,16 @@
 			</div>
 		  </div> 
 		</div>
+	<div class="ListingSelector" style="margin-top: 8px; text-align: center;">
+		<button class="btn btn-primary btn-sm">First Page</button>
+		<button class="btn btn-primary btn-sm"> < </button>
+		<button class="btn btn-primary btn-sm"> > </button>
+		<button class="btn btn-primary btn-sm">Last Page</button>
+	</div>
 </div>
 
         <div class="search_map_wrap" id="map_container" style="position:relative;">
-            <div id="map_canvas" style="width: 1259px; height: 115%;"> 
+            <div id="map_canvas" style="width: 1259px; height: 130%;"> 
             </div>
             <div id="divAllScreen" style="display:none;">
                 <a onclick="allScreen();"></a>
