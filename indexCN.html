@@ -5,10 +5,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="stylehome.css">
+	<link rel="stylesheet" type="text/css" href="stylehomeCN.css">
 	<title>首页</title>
 </head>
 <body>
-<div class="Header">
+<div class="Header" id="loc0">
 	<nav class="navbar sticky-top navbar-expand-lg navbar-custom">
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -67,7 +68,7 @@
 	<div class="wrap">
 	   <h1>上海高端租房平台</h1>
 	   <div class="search">
-	      	<form class="form-inline my-2 my-lg-0">
+	      	<form class="form-inline my-2 my-lg-0" style="margin-left: 100px;">
 		        <input class="form-control mr-sm-2 searchTerm" type="search" placeholder="请输入小区名称，地址，房东姓名和电话查询房源" aria-label="Search" size="45">
 		        <div class="btn-group closel">
 				  <button type="button" class="btn btn-primary filter" onclick="toggle_visibility('foo');"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-menu-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -516,14 +517,13 @@
 		<span>1997年香港回归后建造的小区内的房子。这些小区通常有非常好的<br>保安系统和会所设施，小区通常是以高层和小高层为主。</span>
 	</div>
 	<div class="sidenav1">
-	  <a href=" ">
-	  <img src="./img/apartementslogoblack.png" data-toggle="tooltip" data-placement="right" title="现代公寓" onmouseover="this.src='./img/apartementslogo.png';" onmouseout="this.src='./img/apartementslogoblack.png';"></a><br>
+	  <a href="#"  data-toggle="tooltip" data-placement="right" title="现代公寓"><img src="./img/apartementslogoblack.png" onmouseover="this.src='./img/apartementslogo.png';" onmouseout="this.src='./img/apartementslogoblack.png';"></a><br>
 	  <a href="#loc2" data-toggle="tooltip" data-placement="right" title="老公寓"><img src="./img/oldapartements.png" onmouseover="this.src='./img/oldapartementswhite.png';" onmouseout="this.src='./img/oldapartements.png';"></a><br>
 	  <a href="#loc3" data-toggle="tooltip" data-placement="right" title="现代别墅"><img src="./img/villalogoblack.png" onmouseover="this.src='./img/villalogowhite.png';" onmouseout="this.src='./img/villalogoblack.png';"></a><br>
 	  <a href="#loc4" data-toggle="tooltip" data-placement="right" title="里弄房"><img src="./img/inlinehousesblack.png" onmouseover="this.src='./img/inlinehouseswhite.png';" onmouseout="this.src='./img/inlinehousesblack.png';"></a><br>
 	  <a href="#loc5" data-toggle="tooltip" data-placement="right" title="花园洋房"><img src="./img/traditional.png" onmouseover="this.src='./img/traditionalwhite.png';" onmouseout="this.src='./img/traditional.png';"></a><br>
 	  <a href="#loc6" data-toggle="tooltip" data-placement="right" title="创意办公室"><img src="./img/officeslogoblack.png" onmouseover="this.src='./img/officeslogowhite.png';" onmouseout="this.src='./img/officeslogoblack.png';"></a><br>
-	<a href="#loc0" data-toggle="tooltip" data-placement="right" title="Back"><img src="./img/test.png" style="padding: 0; background-color: grey; height: 17px"></a><br>
+	<a href="#loc0" style="margin-left: 10px;"><img src="./img/test.png" style="padding: 3px; background-color: grey; height: 17px"></a><br>
  </div>
 	<div class="loc1">
 		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
@@ -806,7 +806,7 @@
 		  		<span class="DateLU">X</span>
 		  	</div>
 		  </div>
-		  <div class="pricing">RMB***/月/div>
+		  <div class="pricing">RMB***/月</div>
 		  <div class="container">
 		    <h4><b>地理位置</b></h4>
 		    <div class="address">地址</div>
@@ -881,6 +881,7 @@
 			</div>
 		  </div> 
 		</div>
+
 	</div>
 	<div class="center">
 		<button type="button" class="btn btn-primary">更多老公寓</button>
