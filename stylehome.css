@@ -118,6 +118,9 @@ a:hover {
 nav select {
 	display: none;
 }
+nav .mSelect {
+	display: none;
+}
 nav img {
 	margin-bottom: 4px;
 }
@@ -167,7 +170,9 @@ nav img {
 	.sidenav1 {
 		display: none;
 	}
-
+	nav .mSelect {
+	display: inline-block;
+	}
 
 }
 @media (max-width: 800px) {
@@ -730,7 +735,7 @@ div[slider2] > input[type=range]::-ms-tooltip {
  }
 .checkb1 {	
 	display: grid;
-	grid-template-columns: 145px 145px 145px 145px;
+	grid-template-columns: 150px 150px 145px 145px;
 	grid-column-gap: 110px;
 	grid-row-gap: 10px;
 	justify-content: center;
