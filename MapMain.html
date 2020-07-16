@@ -352,7 +352,7 @@
 		<button class="btn btn-primary btn-sm">Last Page</button>
 	</div>
 	<!-- Expand Button -->
-	<button class="btn btn-primary ExpandBTN" style="background-color: white; color: grey;" onclick="expandListing()">
+	<button class="btn btn-primary ExpandBTN" style="background-color: white; color: grey;" onclick="toggle_visibility('ExpandContent');">
 		<span class="btnText" style="margin-left: -7px;">></span>  
 	</button>
 	<!-- /Expand Button -->
@@ -454,8 +454,8 @@
 		<!-- /expandable listing --> 
 </div>
 
-        <div class="search_map_wrap" id="map_container" style="position:relative; display: none;">
-            <div id="map_canvas" style="width: 1259px; height: 130%;"> 
+        <div class="search_map_wrap" id="map_container" style="position:relative;">
+            <div id="map_canvas" style="width: 1239px; height: 130%;"> 
             </div>
             <div id="divAllScreen" style="display:none;">
                 <a onclick="allScreen();"></a>
@@ -485,6 +485,14 @@
 
     <script src="http://www.lintel-shanghai.com//house/js/lintel.js"></script>
 <script>
+	function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    	}
+
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");

@@ -268,7 +268,7 @@ div[slider] > input[type=range]::-ms-tooltip {
 }
 .mapContainer {
 	display: grid;
-	grid-template-columns: 260px 1259px;
+	grid-template-columns: 280px 1239px;
 }
 .mapContainer button {
   background-color: #46c2db;
