@@ -352,7 +352,7 @@
 		<button class="btn btn-primary btn-sm">Last Page</button>
 	</div>
 	<!-- Expand Button -->
-	<button class="btn btn-primary ExpandBTN" style="background-color: white; color: grey;" onclick="toggle_visibility('ExpandContent');">
+	<button class="btn btn-primary ExpandBTN" style="background-color: white; color: grey;" onclick="toggle_visibility('ExpandContent'); moveMap()">
 		<span class="btnText" style="margin-left: -7px;">></span>  
 	</button>
 	<!-- /Expand Button -->
@@ -453,9 +453,9 @@
 	</div>
 		<!-- /expandable listing --> 
 </div>
-
-        <div class="search_map_wrap" id="map_container" style="">
-            <div id="map_canvas" style="width: 1239px; height: 130%;"> 
+	<!-- Map -->
+        <div class="search_map_wrap" id="map_container">
+            <div id="map_canvas"> 
             </div>
             <div id="divAllScreen" style="display:none;">
                 <a onclick="allScreen();"></a>
@@ -465,7 +465,7 @@
                 <a class="off en" title="Modern Compoud Review"></a>
             </div>
         </div>    
-
+    <!-- /Map -->
 </div>
 <footer class="sticky">
 	<nav>
@@ -493,6 +493,15 @@
           e.style.display = 'block';
     	}
 
+ 	function moveMap() {
+ 		var mapCanv = document.getElementById('map_canvas');
+ 		var mapCont = document.getElementById('map_container')
+ 		var e = document.getElementById('ExpandContent');
+ 		if(e.style.display == 'block')
+ 			mapCanv.style.width = "939px";
+ 		else 
+ 			mapCanv.style.width = "1239px";
+ 	}
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");

@@ -217,13 +217,16 @@ body {
 }
 
 .search_map_wrap{
-	width:960px;
+	width:1239px;
 	height: 580px;
-	float:left;
 	background: #eee;
-	margin-top:10px;
+    float: right;
 }
-#map_canvas{width: 960px; height: 580px;float:left;}
+#map_canvas{
+    width: 1239px; 
+    height: 130%;
+    float:right;
+}
 .county{cursor: pointer;padding:10px 20px;float:left;}
 .county_btn, .county_btn_hover, .county_btn_click {
     color: #888;
