@@ -277,8 +277,9 @@ div[slider] > input[type=range]::-ms-tooltip {
 .ListingSide {
 	height: 95vh;
 	display: grid;
-	grid-template-columns: 260px;
-	grid-template-rows: 3vh 21.5vh 21.5vh 21.5vh 21.5vh;
+	grid-template-columns: 260px 20px 260px;
+	grid-template-rows: 3vh 21.5vh 21.5vh 21.5vh 21.5vh 10vh;
+  grid-auto-flow: column;
 }
 .ListingHeader {
   text-align: center;
@@ -287,6 +288,13 @@ div[slider] > input[type=range]::-ms-tooltip {
   color: #46c2db;
   margin-left: 10px;
   margin-right: 10px;
+}
+#ExpandContent {
+  grid-row-start: 2;
+  display: none;
+}
+.ExpandBTN {
+  grid-row: 1 / span 6;
 }
 .AVL {
 	align-self: center;
@@ -363,4 +371,8 @@ div[slider] > input[type=range]::-ms-tooltip {
 	margin-top: -24px;
 	width: 45%;
 	text-align: center;
+}
+.FeaturesSelectContent {
+  height: 10vh
+  background-color: red;
 }

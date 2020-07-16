@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Map</title>
 	<!-- Reference to the Bing Maps SDK -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="search_map.css" />  
@@ -12,7 +11,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="MapMainstyle.css">
-
+		<title>Map</title>	
 
 </head>
 <body>
@@ -154,11 +153,28 @@
 		<select style="width: 190px; margin-bottom: 10px;">
 				    <option value="" disabled hidden selected>Location</option>
 				    <option value="All" disabled>Please Select</option>
-				    <option value="FCons">French consession</option>
-				    <option value="JDis">Jingan District</option>
-				    <option value="XandT">Xintiandi and Tianzifang</option>
+				    <option value="FCons">French concession</option>
+				    <option value="JDis">Jing'an</option>
+				    <option value="XandT">XTD & TZF</option>
 				    <option value="">Lujiazui</option>
-				    <option value="">World Park and Biyun Community</option>
+				    <option value="">Century Park & Green City</option>
+				    <option value="">Tianshan Hongqiao Gubei</option>
+				    <option value="">Puxi Int'l Schools</option>
+				    <option value="">PPL Square & The Bund</option>
+				    <option value="">Xujiahui</option>
+				    <option value="">Xinhua Road</option>
+				    <option value="">North Jing'an</option>
+				    <option value="">Zhongshan Park</option>
+				    <option value="">Changfeng Park</option>
+				    <option value="">West Bund</option>
+				    <option value="">North Bund</option>
+				    <option value="">The New Bund</option>
+				    <option value="">Pudong Int'l Schools KangQiao</option>
+				    <option value="">Pudong Int'l Schools Tang County</option>
+				    <option value="">Waigaoqiao Free Trade Zone</option>
+				    <option value="">New Jiangwan City & Wujiaochang</option>
+				    <option value="">Pudong Promenade</option>
+				    <option value="">Other Areas</option>
 				</select>
 				<div class="Range-Slider">
 				<span class="title"><img src="./img/calc.png"> Monthly RMB</span>
@@ -198,13 +214,22 @@
 					</div>
 				</div>
 			<select style="width: 190px; margin-bottom: 10px;"> <!-- Later open a filter menu thats dependant on other choices-->
-				    <option value="" disabled hidden selected>More Options</option>
-				    <option value="All">All</option>
-				    <option value="FCons">T</option>
-				    <option value="JDis">T</option>
-				    <option value="XandT">T</option>
-				    <option value="">T</option>
-				    <option value="">T</option>
+				    <option value="" disabled hidden selected>Features</option>
+				    <option value="All" disabled>Please Select</option>
+					<option value="TFM">Penthouse</option>
+					<option value="">Townhouse</option>
+					<option value="">Duplexed</option>
+					<option value="">Lane House Apartment</option>
+					<option value="">Garden House Apartment</option>
+					<option value="">One Storey Flat</option>
+					<option value="">Spacious Flat</option>
+					<option value="">Walk-up Local Building</option>
+					<option value="">Colonial Apartment</option>
+					<option value="">Serviced Apartment</option>
+					<option value="">Factory Loft Apartment</option>
+					<option value="">Townhouse Apartment</option>
+					<option value="">Loft Apartment</option>
+					<option value="">Local Lift Building</option>
 			</select>
 			<div class="AVL">
 				<span class="AVL"><img src="./img/energy.png" style="margin-top: -5px;"> AVL <input type="checkbox" name=""></span>
@@ -216,10 +241,11 @@
 				<input class="form-control mr-sm-2 searchTerm" type="search" placeholder="Keyword entry" aria-label="Search" size="40">
 			</div>
 			<div class="FeaturesSelect">
-				<button class="btn btn-primary my-2 my-sm-0">Features -</button>
+				<button class="btn btn-primary my-2 my-sm-0">More Features -</button>
+				</div>
 			</div>
 </div>
-<!--Map -->
+<!--Main content -->
 <div class="mapContainer">
 <div class="ListingSide">
 	<div class="ListingHeader">
@@ -325,9 +351,110 @@
 		<button class="btn btn-primary btn-sm"> > </button>
 		<button class="btn btn-primary btn-sm">Last Page</button>
 	</div>
+	<!-- Expand Button -->
+	<button class="btn btn-primary ExpandBTN" style="background-color: white; color: grey;" onclick="expandListing()">
+		<span class="btnText" style="margin-left: -7px;">></span>  
+	</button>
+	<!-- /Expand Button -->
+	<!-- Expandable listings -->
+	<div id="ExpandContent">
+	<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card" id="firstCardEx">
+		 <div class="container1" id="container1">
+		 	<div class="Address">
+		  	Address here
+		  </div>
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Area</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		 	<div class="Address">
+		  	Address here
+		  </div>
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Area</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		 	<div class="Address">
+		  	Address here
+		  </div>
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Area</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		 	<div class="Address">
+		  	Address here
+		  </div>
+		  <span class="exInfo" id="exInfo">More Information goes here </span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Last Update:
+		  		<span class="DateLU">X</span>
+		  	</div>
+		  </div>
+		  <div class="pricing">Price/Month</div>
+		  <div class="container">
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Area</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+	</div>
+		<!-- /expandable listing --> 
 </div>
 
-        <div class="search_map_wrap" id="map_container" style="position:relative;">
+        <div class="search_map_wrap" id="map_container" style="position:relative; display: none;">
             <div id="map_canvas" style="width: 1259px; height: 130%;"> 
             </div>
             <div id="divAllScreen" style="display:none;">
