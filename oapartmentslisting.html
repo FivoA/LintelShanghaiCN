@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Reference to the Bing Maps SDK -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="search_map.css" />  
+    <script src="js/jquery-1.7.min.js"></script>
+    <script src="js/common.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="stylelisting.css">
+
+	<title>Property Listing</title>
+</head>
+<body>
+	<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/jquery.alerts.js"></script>
+    <script>
+        var langid = !$.cookie('langid') ? "en" : $.cookie('langid');
+      
+        $(function () {
+            $(".en,.zh").hide();
+            $("." + langid).show();
+            $("title").html($(".pagetitle" + langid).html());
+
+            $(".Alang").click(function () {
+                langid = !$.cookie('langid') ? "en" : $.cookie('langid');
+                if (langid == "zh") {
+                    langid = "en";
+                    $.cookie('langid', "en", { path: '/' });
+                } else if (langid == "en" || !langid) {
+                    langid = "zh";
+                    $.cookie('langid', "zh", { path: '/' });
+                }
+                $(".en,.zh").hide();
+                $("." + langid).show();
+                $("title").html($(".pagetitle" + langid).html());
+
+                if (typeof (ChangeLanguage) != "undefined") {
+                    ChangeLanguage();
+                }
+            });
+            $(".alogin").click(function () {
+                var mid = "21";
+                if (mid < 1) {
+                    toReg(window.location.href);
+                } else {
+                    window.location.href = $(this).attr("data-url");
+                }
+            });
+        });
+        function collect(houseid) {
+            $.ajax({
+                type: "Post",
+                url: "http://www.lintel-shanghai.com/house/data/NearHouse.aspx?r=" + Math.random(),
+                data: {
+                    type: "getinfo",
+                    houseid: houseid
+                    },
+                dataType: "text",
+                async: false,
+                beforeSend: function (XMLHttpRequest) { },
+                success: function (data, textStatus) {
+                    // $(data).find("info").each(function (i) {
+                    $(".detailist" + langid + " ul").html($(data).find("info").html());
+                    $(".pageStyle" + langid).html($(data).find("page").html());
+                    //});
+                }
+            });
+        }
+        function toReg(backurl) {
+            if (langid == "en") {
+                jConfirm('If you wish to use this function，you need to register on our website first', 'Site Notice', function (r) {
+                    if (r == true) {
+                        window.location.href = "/login/login.aspx?backurl=" + encodeURIComponent(backurl);
+                    }
+                });
+                $("#popup_ok").attr("value", "Confirm");
+                $("#popup_cancel").attr("value", "Cancel");
+
+            } else {
+                jConfirm('若要用此功能，需要先注册', '此网站提示', function (r) {
+                    if (r == true) {
+                        window.location.href = "/login/login.aspx?backurl=" + encodeURIComponent(backurl);
+                    }
+                });
+            }
+        }
+</script>
+<div class="Header">
+	<nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <img src="./img/logo.png" width="110" height="40">
+	      <a class="nav-item nav-link active" href="index.html"><img src="./img/homelogo.png">
+		   Home <span class="sr-only">(current)</span></a>
+		  <li class="nav-item dropdown">
+	      	<a class="nav-item nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/apartementslogo.png"> Apartments</a>
+		  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#">Modern Apartments</a>
+	          <a class="dropdown-item" href="#">Old Apartments</a>
+          	</div>
+          </li>
+	      <a class="nav-item nav-link" href="#"><img src="./img/villalogo.png"> Villas</a>
+	      <li class="nav-item dropdown">
+	      	<a class="nav-item nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="./img/houselogo.png"> Traditional Houses</a>
+		  	<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+		          <a class="dropdown-item" href="lanehouselisting.html">Lane Houses</a>
+		          <a class="dropdown-item" href="#">Garden Houses</a>
+          	</div>
+      	  </li>
+	      <a class="nav-item nav-link" href="#"><img src="./img/officeslogo.png"> Creative Offices</a>
+	      <a class="nav-item nav-link" href="#"><img src="./img/orientationlogo.png"> Orientations</a>
+	      <a class="nav-item nav-link" href="#"><img src="./img/supportlogo.png"> Online Requests</a>
+	      <div class="psup" style="height: 37px !important; width: 35px !important; border-radius: 4px;">
+	      	<a class="nav-item nav-link" href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title="24 Hour Hotline:<br>(86) 021-64689611<br>(86) 138-1843-4844" style="margin-left: 2px !important;"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>	
+		    </svg></a> 
+		  </div>
+		  <a href="http://www.lintel-shanghai.com/login/login.aspx"><button type="button" class="btn btn-outline-light spacel">Join us</button></a>
+		  <div class="langs spacel langa">
+			  <a href="oapartmentslisting.html" class="selectedlang">Eng.</a>
+			  <a href="oapartmentslistingcn.html">中文</a>
+		  </div>
+	    </div>
+	  </div>
+	  <select onchange="location = this.value;">
+        <option value="#" selected="selected">Home</option> 
+        <option value="#">Morden Apartments</option>
+        <option value="#">Old Apartments</option> 
+        <option value="#">Villas</option> 
+        <option value="#">Lane Houses</option>
+        <option value="#">Garden Houses</option>
+	    <option value="#">Creative Offices</option>	 
+	    <option value="#">Orientations</option>   
+	    <option value="#">Online Requests</option>       
+	    <option value="#">Contact</option>	 
+	    <option value="#">Join Us</option>           
+	  </select>
+	  <select onchange="location = this.value;">
+        <option value="#" selected="selected">English</option> 
+        <option value="#">中文</option>            
+	  </select>
+	</nav>
+</div>
+<div class="WidthWrap">
+	<img src="./img/prop.jpg" id="testimg" style="display: none;">
+	<div class="wrap">
+		<!-- Search Bar and Link to Map -->
+		<div class="search">
+	      	<form class="form-inline my-2 my-lg-0">
+		        <input class="form-control mr-sm-2 searchTerm" type="search" placeholder="Area/Type of Housing" aria-label="Search" size="32">
+		        <button class="btn btn-primary my-2 my-sm-0 closel" type="submit"><i class="fa fa-search"></i></button>
+		        <a href="MapMain.html" style="width: 70px; height: 35px; margin-left: 620px; background-image: url(./img/mapButtonBG.png); text-decoration: none;">
+		       	<img src="./img/orientation.png" style="margin-top: 5px; margin-left: 10px;"><div style="color: black; margin-top: -20px; margin-left: 30px;"> Map </div>
+		       </a>
+	        </form>
+	   	</div>
+	</div>
+</div>
+	<div class="infoBar">
+		<!-- Info Bar about the specific page that youre at-->
+		<span class="PageInfo">
+			<a class="firstPage" href="#">Home</a> >
+			<a class="secondPage" href="#">Property List</a> >
+			<a class="thirdPage" href="#">Old Apartments</a> >
+			<a class="thirdPage" href="#">Address</a>
+		</span>
+	</div>
+<div class="WidthWrap">
+	<div class="Filter1">
+		<!-- Type filter -->
+		<span class="TypeHeader"><img src="./img/typelogo.png"> Type</span>
+		<div class="TypeContent">
+			<a href="#">All</a>
+			<a href="mapartmentslisting.html">Modern Apartments</a>
+			<a style="color: #46c2db;"><u>Old Apartments</u></a>
+			<a href="villalisting.html">Villas</a>
+			<a href="lanehouselisting.html">Lane Houses</a>
+			<a href="gardenhouselisting.html">Garden Houses</a>
+			<a href="cofficelisting.html">Creative Offices</a>
+		</div>
+	</div>
+	<div class="Filter2">
+		<!-- Geo Filter -->
+		<span class="LocationHeader"><img src="./img/locationlogo.png"> Location</span>
+		<div class="LocationContent">
+			<a style="color: #46c2db;"><u>All</u></a>
+			<a href="#">French Concession</a>
+			<a href="#">Jing'an</a>
+			<a href="#">XTD & TZF</a>
+			<a href="#">Lujiazui</a>
+			<a href="#">Century Park & Green City</a>
+			<a href="#">Tianshan Hongqiao Gubei</a>
+			<a href="#">Puxi Int'l Schools</a>
+			<a href="#">PPL Square & The Bund</a>
+			<a href="#">Xujiahui</a>
+			<a href="#">Xinhua Road</a>
+			<a href="#">North Jing'an</a>
+			<a href="#">Zhongshan Park</a>
+			<a href="#">Changfeng Park</a>
+			<a href="#">West Bund</a>
+			<a href="#">North Bund</a>
+			<a href="#">The New Bund</a>
+			<a href="#">Pudong Int'l Schools KangQiao</a>
+			<a href="#">Pudong Int'l Schools Tang County</a>
+			<a href="#">Waigaoqiao Free Trade Zone</a>
+			<a href="#">New Jiangwan City & Wujiaochang</a>
+			<a href="#">Pudong Promenade</a>
+			<a href="#">Other Areas</a>
+		</div>
+		<div class="Dropdown" id="foo">
+			<!-- Dropdown with more options -->
+			<div class="PriceRange">
+				<img src="./img/calc.png" style="margin-top: -3px;">
+				<span> Monthly RMB:</span>
+			</div>
+			<div slider id="slider-distance" style="margin-left: 140px;">
+					  <div>
+					    <div inverse-left style="width:70%;"></div>
+					    <div inverse-right style="width:70%;"></div>
+					    <div range style="left:0%;right:0%;"></div>
+					    <span thumb style="left:0%;"></span>
+					    <span thumb style="left:100%;"></span>
+					    <div sign style="left:0%;">
+					      <span id="value">0</span>
+					    </div>
+					    <div sign style="left:100%;">
+					      <span id="value">300000</span>
+					    </div>
+					  </div>
+					  <input type="range" tabindex="0" value="0" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[1].style.width=value+'%';
+					  children[5].style.left=value+'%';
+					  children[7].style.left=value+'%';children[11].style.left=value+'%';
+					  children[11].childNodes[1].innerHTML=this.value;" />
+
+					  <input type="range" tabindex="0" value="300000" max="300000" min="0" step="1000" oninput="
+					  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+					  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+					  var children = this.parentNode.childNodes[1].childNodes;
+					  children[3].style.width=(100-value)+'%';
+					  children[5].style.right=(100-value)+'%';
+					  children[9].style.left=value+'%';children[13].style.left=value+'%';
+					  children[13].childNodes[1].innerHTML=this.value;" />
+					</div>
+					<span class="LayoutHeader"><img src="./img/layoutlogo.png" style="margin-top: -5px;"> Layout</span>
+					<div class="LayoutContent" style="margin-left: 18px;">
+						<a style="color: #46c2db;"><u>All</u></a>
+						<a href="#">1 Bedroom</a>
+						<a href="#">2 Bedrooms</a>
+						<a href="#">3 Bedrooms</a>
+						<a href="#">4 Bedrooms</a>
+						<a href="#">5 Bedrooms</a>
+						<a href="#">6 Bedrooms</a>
+						<a href="#">6+ Bedrooms</a>
+					</div><br>
+					<span class="ConfigurationHeader"><img src="./img/configurationlogo.png"> Factors</span>
+					<div class="ConfigurationContent" style="margin-left: 18px;">
+						<input type="checkbox" name=""> <img src="./img/AC.png" style="margin-top: -3px;"> Central Aircon
+						<input type="checkbox" name=""> <img src="./img/heating.png" style="margin-top: -3px;"> Floor Heating
+						<input type="checkbox" name=""> <img src="./img/balcony.png" style="margin-top: -3px;"> Balcony
+						<input type="checkbox" name=""> <img src="./img/garden.png" style="margin-top: -3px;"> Garden
+						<input type="checkbox" name=""> <img src="./img/kitchen.png " style="margin-top: -3px;"> Open Kitchen
+						<input type="checkbox" name=""> <img src="./img/warmwall.png " style="margin-top: -3px;"> Wall Radiators
+						<input type="checkbox" name=""> <img src="./img/terrace.png " style="margin-top: -3px;"> Terrace
+						<input type="checkbox" name=""> <img src="./img/energy.png " style="margin-top: -3px;"> AVL Units
+					</div>
+		</div>
+		<div class="expandBtn">
+			<button type="button" class="btn btn-primary marg-top" onclick="toggle_visibility('foo');" style="margin-top: 15px; margin-bottom: 10px;"> Filter <img src="./img/arrowdown.png" style="margin-top: 2px;"></button>
+		</div>
+	</div>
+	<div class="Property">
+		<!--Grid system with pic box on the left and info card on the right -->
+		<!-- Quick info bar on who added this listing -->
+		<div class="InfoBarAdd">
+			<span class="HousingSource" style="margin-right: 10px; font-size: 0.9em">Resources: Landlord's Type</span>
+			<span class="ConsultantSource" style="font-size: 0.9em">Listed by: Candice Huang</span>
+		</div>
+
+		<!-- End info bar -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		  </ol>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img src="./img/prop.jpg" class="d-block w-100" style="object-fit: cover;" onclick="toggle_visibility('testimg')">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="./img/prop.jpg" class="d-block w-100" style="object-fit: cover;">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="./img/prop2.jpg" class="d-block w-100" style="object-fit: cover; /*object-fit: contain; */">
+		    </div>
+		  </div>
+		  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div> 
+		
+		<div class="moreInfo">
+		<span class="mInfoHeader">Location+Address</span><br>
+		<span class="mInfoMetro"> <img src="./img/metrologo.png" style="margin-top: -5px;"> Metro Info </span><br>
+		<span class="mInfoPrice"> Market Price/mon+Lintel Price/mon</span><br>
+		<span class="basicInfo"> Information: </span><hr>
+		<div class="mInfo1">
+			<div class="AreaInfo">
+				<span class="AreaNum">300m²</span><br>
+				<span class="AreaInf">Size</span>
+			</div>
+			<div class="FloorInfo">
+				<img src="./img/flattypelogo.png"><br>
+				<span class="FloorInf">Features</span>
+			</div>
+			<div class="BedInfo">
+				<img src="./img/bedlogosmall.png"><br>
+				<span class="BedInf">3 </span>
+			</div>
+			<div class="BathInfo">
+				<img src="./img/showerlogosmall.png"><br>
+				<span class="BathInf">4 </span>
+			</div><br>
+		</div>
+		<span class="featuresInfo"> Factors: </span><hr>
+		<div class="mInfo2">
+			<div class="openKitchen">
+				<img src="./img/kitchen.png"><br>
+				<span class="openKitchenInf">Open Kitchen</span>
+			</div>
+			<div class="CAC">
+				<img src="./img/AC.png"><br>
+				<span class="CACInf">Central Aircon</span>
+			</div>
+			<div class="FloorH">
+				<img src="./img/heating.png"><br>
+				<span class="FloorHInf">Floor Heating</span>
+			</div>
+			<div class="Radiator">
+				<img src="./img/warmwall.png"><br>
+				<span class="RadtiatorInf">Wall Radiators</span>
+			</div>
+			<div class="GardenC">
+				<img src="./img/garden.png"><br>
+				<span class="GardenCInf">Garden</span>
+			</div>
+			<div class="BalconyC">
+				<img src="./img/balcony.png"> <br>
+				<span class="BalconyCInf">Balcony</span>
+			</div>
+			<div class="TerraceC">
+				<img src="./img/terrace.png"><br>
+				<span class="TerraceCInf">Terrace </span>
+			</div>
+		</div><br>
+		<span class="landlordInfo"> Landlord: </span><hr>
+		<div class="mInfo3">
+			<div class="landlordContact">
+				<img src="./img/landlordlogo.png" style="margin-top: -5px;">
+				<span class="landlordInf"> Contact Person </span>
+			</div>
+			<div class="landlordPhone">
+				<img src="./img/phonelogosmall.png" style="margin-top: -5px;">
+				<span class="landlordPhoneInf">Contact Number </span>
+			</div>
+			<div class="ContactBTN">
+				<button class="btn btn-primary" onclick="window.location.href='#contact';">Contact us</button>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="LocationMap">
+		<!--Map with the accurate Location -->
+		<div class="search_map_wrap" id="map_container" style="position:relative; width: 1020px; height: 340px;">
+            <div id="map_canvas" style="width: 1020px; height: 340px;"> 
+            </div>
+            <div id="divAllScreen" style="display:none;">
+                <a onclick="allScreen();"></a>
+            </div>
+            <div id="divModern" style="display:none;">
+                <a class="off zh" title="现代小区预览"></a>
+                <a class="off en" title="Modern Compoud Review"></a>
+            </div>
+        </div>    
+	</div>
+
+	<div class="MapOptions">
+		<div class="SightseeingCB">
+			<img src="./img/sightslogo.png">
+			<span>Sights</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/museumlogo.png">
+			<span>Culture & Museum</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/rblogo.png">
+			<span>F&B</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/shoppinglogo.png">
+			<span>Shopping</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/hospitallogo.png">
+			<span>Int'l Hospitals</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/schoolslogo.png">
+			<span>Int'l Schools</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/hotellogo.png">
+			<span>5-Star Hotels</span>
+			<input type="checkbox">
+		</div>
+		<div class="SightseeingCB">
+			<img src="./img/transportlogo.png">
+			<span>Public Transport</span>
+			<input type="checkbox">
+		</div>
+	</div>
+
+	<div class="ListingHeader">
+
+		<!-- Header for listing grid -->
+		Recommendations
+	</div>
+	<div class="PropListing">  
+		<!--Listing grid -->
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">Selling Points</span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Updated * Days Ago/Updated Today
+		  	</div>
+		  </div>
+		  <div class="pricing">RMB***/Month</div>
+		  <div class="container">
+		    <h4><b>Old Apartment</b></h4>
+		    <div class="address">Location+Address</div>
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Size</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">Selling Points</span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Updated * Days Ago/Updated Today
+		  	</div>
+		  </div>
+		  <div class="pricing">RMB***/Month</div>
+		  <div class="container">
+		    <h4><b>Old Apartment</b></h4>
+		    <div class="address">Location+Address</div>
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Size</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">Selling Points</span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Updated * Days Ago/Updated Today
+		  	</div>
+		  </div>
+		  <div class="pricing">RMB***/Month</div>
+		  <div class="container">
+		    <h4><b>Old Apartment</b></h4>
+		    <div class="address">Location+Address</div>
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Size</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+		<div onclick="location.href='Page2v1.0.html';" style="cursor:pointer;" class="card">
+		 <div class="container1" id="container1">
+		  <span class="exInfo" id="exInfo">Selling Points</span>
+		  <img src="./img/prop.jpg" alt="Avatar" style="width:100%">
+		  <div class="lastUpdate">
+		  		Updated * Days Ago/Updated Today
+		  	</div>
+		  </div>
+		  <div class="pricing">RMB***/Month</div>
+		  <div class="container">
+		    <h4><b>Old Apartment</b></h4>
+		    <div class="address">Location+Address</div>
+		    <div class="mInfo">
+		    	<span id="AreaNum" style="margin-right: 35px;">Size</span>
+			    <img src="./img/bedlogo.png">
+			    <span id="BathRNum" style="margin-right: 35px;">X</span>
+			    <img src="./img/showerlogo.png">
+			    <span id="BedRNum">X</span>
+			</div>
+		  </div> 
+		</div>
+
+	</div>
+</div>
+<footer class="sticky">
+	<nav>
+		<a href="#">About us </a>| 
+		<a href="#"> Contact us </a>	 | 	
+		<a href="#"> Career </a>	 | 	
+		<span>沪ICP备19033836号	</span>
+	</nav>
+</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	$(function () {
+  			$('[data-toggle="tooltip"]').tooltip()
+		})
+		function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    	}
+    	function updateTextInput(val) {
+          document.getElementById('textInput').value=val; 
+        }
+        (function() {
+ 
+	  var parent = document.querySelector(".price-slider");
+	  if(!parent) return;
+	 
+	  var
+	    rangeS = parent.querySelectorAll("input[type=range]"),
+	    numberS = parent.querySelectorAll("input[type=number]");
+	 
+	  rangeS.forEach(function(el) {
+	    el.oninput = function() {
+	      var slide1 = parseFloat(rangeS[0].value),
+	        	slide2 = parseFloat(rangeS[1].value);
+	 
+	      if (slide1 > slide2) {
+			[slide1, slide2] = [slide2, slide1];
+	      }
+	 
+	      numberS[0].value = slide1;
+	      numberS[1].value = slide2;
+	    }
+	  });
+	 
+	  numberS.forEach(function(el) {
+	    el.oninput = function() {
+			var number1 = parseFloat(numberS[0].value),
+			number2 = parseFloat(numberS[1].value);
+			
+	      if (number1 > number2) {
+	        var tmp = number1;
+	        numberS[0].value = number2;
+	        numberS[1].value = tmp;
+	      }
+	 
+	      rangeS[0].value = number1;
+	      rangeS[1].value = number2;
+	 
+		    }
+		  });
+		 
+		})();
+    </script>
+
+
+    <script src="http://www.lintel-shanghai.com//house/js/lintel.js"></script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f73cedd2b8f248be6e95444da775ad02";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    <script src="js/map.js?v=20200423"></script>
+    <script src="js/jqueryscrollboxl.js"></script>
